@@ -41,9 +41,19 @@
             font-family: 'Rubik', sans-serif;
             font-weight: bold;
         }
-        .btn{
-            margin-top: 20px;
-            width: 80px;
+        .btn-container{
+            position: relative;
+            .btn{
+                margin-top: 20px;
+                width: 80px;
+            }
+            .error{
+                position: absolute;
+                top: 32px;
+                right: 0;
+                color: red;
+            }
         }
+    
     }
 }
