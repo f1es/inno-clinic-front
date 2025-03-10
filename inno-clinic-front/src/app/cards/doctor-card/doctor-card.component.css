@@ -1,0 +1,43 @@
+.doctor{
+    background-color: white;
+    border-radius: 15px;
+    width: 250px;
+    height: 325px;
+    line-height: 20px;
+    
+    img{
+        border-radius: 5px;
+        width: 225px;
+        height: 200px;
+        cursor: pointer;
+        margin-left: 5%;
+        margin-top: 5%;
+    }
+    .detail{
+        /* .address{
+            font-weight: bold;
+            margin-top: 5px;
+        } */
+         
+        padding-left: 10px;
+        .is-active{
+            display: flex; 
+            .indicator{
+                margin-left: 5px;
+                width: 15px;
+                height: 15px;
+                background-color: red;
+                border-radius: 100%;
+                border: 1px solid #000000;
+            }
+
+            .green{
+                background-color: green;
+            }
+              
+            .red{
+                background-color: red;
+            }
+        }
+    }
+}
