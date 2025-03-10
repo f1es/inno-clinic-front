@@ -1,11 +1,15 @@
 <app-header></app-header>
 <div class="home-container">
     <div class="all-offices">
+        <div class="top">
+            <h4>Offices</h4>
+            <div class="view-all">View all</div>
+        </div>
         <div class="office-thumbnail">
-            <div class="cover"></div>
-            <div class="detail">
-                <div class="name"></div>
-                <div class="rating"></div>
+            <div class="grid-container">   
+                        @for (office of offices; track office) {
+                        <app-office class="col-2" [office]="office"></app-office>
+                    }
             </div>
         </div>
     </div>
