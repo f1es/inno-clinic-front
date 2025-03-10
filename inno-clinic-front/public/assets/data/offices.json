@@ -3,22 +3,22 @@
       "id": "4a073513-8fd4-402e-b85e-ff0987f9b354",
       "address": "ylica Ylichnaya",
       "registryPhoneNumber": "234-56-78",
-      "isActive": true,
-      "photoId": "3fa85f64-5717-4562-b3fc-2c963f66afa6"
+      "isActive": false,
+      "photoId": "https://i.ibb.co/ZzrH355/image.jpg"
     },
     {
       "id": "6d2cbb0c-7e8b-4c41-9b33-298787d9bead",
       "address": "ylica Addresovanaya 44-55",
       "registryPhoneNumber": "100-10-10",
       "isActive": true,
-      "photoId": "3fa85f64-5717-4562-b3fc-2c963f66afa6"
+      "photoId": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREISHH4WU6z-0UEU6pHZF2vcAiKPvu7lpwfA&s"
     },
     {
       "id": "3e28a1a1-9099-40e5-9b4f-5141eb285d68",
       "address": "some address",
       "registryPhoneNumber": "111-22-33",
       "isActive": true,
-      "photoId": "3fa85f64-5717-4562-b3fc-2c963f66afa6"
+      "photoId": "https://cdn-s-static.arzamas.academy/x/119-bass-QqFwvKssCCYDK2ZmNx4zWzic/dom/img/dom-2.jpg"
     },
     {
       "id": "6b800c99-8a44-4850-b685-c32187b23888",
@@ -32,6 +32,76 @@
       "address": "string",
       "registryPhoneNumber": "string",
       "isActive": false,
+      "photoId": "3fa85f64-5717-4562-b3fc-2c963f66afa6"
+    },
+    {
+      "id": "c1722e75-6ab1-4d2a-bf10-f36c075e9815",
+      "address": "string",
+      "registryPhoneNumber": "string",
+      "isActive": false,
+      "photoId": "3fa85f64-5717-4562-b3fc-2c963f66afa6"
+    },
+    {
+      "id": "1b800c99-8a44-4850-b685-c32187b23888",
+      "address": "tyt kto to jivet",
+      "registryPhoneNumber": "111-22-33",
+      "isActive": true,
+      "photoId": "3fa85f64-5717-4562-b3fc-2c963f66afa6"
+    },
+    {
+      "id": "c1722e75-6ab1-4d2a-bf10-f36c075e9815",
+      "address": "string",
+      "registryPhoneNumber": "string",
+      "isActive": false,
+      "photoId": "3fa85f64-5717-4562-b3fc-2c963f66afa6"
+    },
+    {
+      "id": "1b800c99-8a44-4850-b685-c32187b23888",
+      "address": "tyt kto to jivet",
+      "registryPhoneNumber": "111-22-33",
+      "isActive": true,
+      "photoId": "3fa85f64-5717-4562-b3fc-2c963f66afa6"
+    },
+    {
+      "id": "1b800c99-8a44-4850-b685-c32187b23888",
+      "address": "tyt kto to jivet",
+      "registryPhoneNumber": "111-22-33",
+      "isActive": true,
+      "photoId": "3fa85f64-5717-4562-b3fc-2c963f66afa6"
+    },
+    {
+      "id": "c1722e75-6ab1-4d2a-bf10-f36c075e9815",
+      "address": "string",
+      "registryPhoneNumber": "string",
+      "isActive": false,
+      "photoId": "3fa85f64-5717-4562-b3fc-2c963f66afa6"
+    },
+    {
+      "id": "1b800c99-8a44-4850-b685-c32187b23888",
+      "address": "tyt kto to jivet",
+      "registryPhoneNumber": "111-22-33",
+      "isActive": true,
+      "photoId": "3fa85f64-5717-4562-b3fc-2c963f66afa6"
+    },
+    {
+      "id": "1b800c99-8a44-4850-b685-c32187b23888",
+      "address": "tyt kto to jivet",
+      "registryPhoneNumber": "111-22-33",
+      "isActive": true,
+      "photoId": "3fa85f64-5717-4562-b3fc-2c963f66afa6"
+    },
+    {
+      "id": "c1722e75-6ab1-4d2a-bf10-f36c075e9815",
+      "address": "string",
+      "registryPhoneNumber": "string",
+      "isActive": false,
+      "photoId": "3fa85f64-5717-4562-b3fc-2c963f66afa6"
+    },
+    {
+      "id": "1b800c99-8a44-4850-b685-c32187b23888",
+      "address": "tyt kto to jivet",
+      "registryPhoneNumber": "111-22-33",
+      "isActive": true,
       "photoId": "3fa85f64-5717-4562-b3fc-2c963f66afa6"
     }
   ]

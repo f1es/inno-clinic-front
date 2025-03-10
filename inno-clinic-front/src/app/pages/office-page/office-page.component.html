@@ -1,0 +1,15 @@
+<app-header></app-header>
+<div class="page-container">
+    <div class="top">
+        <div class="left">
+            <div class="office-container">
+                <div class="address">{{ office.address }}</div>
+                <div class="phone">{{ office.registryPhoneNumber }}</div>
+                <div class="status" [innerHTML]="getStatus()"></div>
+                <div class="photo"><img [src]="office.photoId" alt=""></div>
+            </div>
+        </div>
+        <div class="right"></div>
+    </div>
+    <div class="bottom"></div>
+</div>
