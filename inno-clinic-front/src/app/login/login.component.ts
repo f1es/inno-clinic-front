@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { AuthService } from '../services/auth.service';
+import { AuthService } from '../services/auth/auth.service';
 import { Router } from '@angular/router';
 
 @Component({
@@ -16,7 +16,7 @@ export class LoginComponent {
 
   constructor(private auth: AuthService, private router: Router) { }
 
-  login(){
+  login() : void{
     if (this.username.trim().length === 0){
       this.errorMessage = "Username is required"
     }
