@@ -3,6 +3,7 @@ import { HeaderComponent } from "../header/header.component";
 import { HttpClient } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import { OfficeComponent } from "../office/office.component";
+import { OfficesService } from '../services/offices-service/offices.service';
 
 @Component({
   selector: 'app-home',
@@ -12,16 +13,15 @@ import { OfficeComponent } from "../office/office.component";
 })
 export class HomeComponent {
 
-  offices: any;
+  public offices: any;
   
-  constructor(private http: HttpClient) {
+  constructor(private http: HttpClient, private officesSerivce: OfficesService) {
     this.getOfficesAssets();
    }
   
-  getOfficesAssets(){
-    this.http.get("http://localhost:4200/assets/data/offices.json").subscribe((offices) => {
+  public getOfficesAssets(): void{
+    this.officesSerivce.getAll().subscribe((offices: Object) => {
       this.offices = offices;
-      console.log(this.offices);
-    })
+    });
   }
 }
