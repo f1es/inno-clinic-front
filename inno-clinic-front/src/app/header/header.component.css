@@ -15,12 +15,30 @@
         cursor: pointer;
     }
 
-    .logout{
-        font-size: 18px;
-        font-weight: bold;
-        margin-right: 40px;
-        font-family: 'Rubik', sans-serif;
-        color: white;
-        cursor: pointer;
+    .buttons{
+        position: relative;
+        display: flex;
+
+        .logout{
+            font-size: 18px;
+            font-weight: bold;
+            margin-right: 40px; 
+            font-family: 'Rubik', sans-serif;
+            color: white;
+            cursor: pointer;
+        }
+    
+        .profile{
+            position: left;
+            font-size: 18px;
+            font-weight: bold;
+            margin-right: 40px;
+            font-family: 'Rubik', sans-serif;
+            color: white;
+            cursor: pointer;
+        }
+
     }
+
+    
 }
