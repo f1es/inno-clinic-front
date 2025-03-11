@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthService } from '../services/auth/auth.service';
+import { RoleService } from '../services/role-service/role.service';
 
 @Component({
   selector: 'app-header',
@@ -10,13 +11,22 @@ import { AuthService } from '../services/auth/auth.service';
 })
 export class HeaderComponent {
 
-  constructor(private router: Router, private auth: AuthService) { }
+  public role: String = '';
 
-  goHome(){
+  constructor(
+    private router: Router, 
+    private auth: AuthService,
+    private roleService: RoleService) { }
+
+  public ngOnInit(): void {
+    this.role = this.roleService.getRole();
+  }
+
+  public goHome(): void{
     this.router.navigate(['home']);
   }
 
-  logout(){
+  public logout(): void{
     this.auth.logout();
     this.router.navigate(['login'])
   }
