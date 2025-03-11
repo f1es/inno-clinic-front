@@ -1,10 +1,8 @@
 .page-container{
-    /* width: 1400px;
-    margin: 0 auto; */
     background-color: brown;
     min-height: calc(100vh - 80px);
 
-    .top{
+    .top{ 
         display: flex;
 
         h4{
@@ -56,22 +54,28 @@
         }
 
         .right{
+
+            .grid-container {
+                display: grid;
+                grid-template-columns: auto auto auto auto auto;
+                grid-gap: 10px;
+                padding: 10px;
+              }
+              
+            .grid-container > div {
+                text-align: center;
+                padding: 20px 0;
+                font-size: 30px;
+            }  
+
             .doctors-container{
                 padding-left: 60px;
                 padding-top: 40px;
+            }
 
-                .grid-container {
-                    display: grid;
-                    grid-template-columns: auto auto auto auto auto;
-                    grid-gap: 10px;
-                    padding: 10px;
-                  }
-                  
-                .grid-container > div {
-                    text-align: center;
-                    padding: 20px 0;
-                    font-size: 30px;
-                }  
+            .services-container{
+                padding-left: 60px;
+                padding-top: 40px;
             }
         }
     }

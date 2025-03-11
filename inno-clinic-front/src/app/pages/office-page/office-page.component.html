@@ -19,6 +19,14 @@
                     }
                 </div>
             </div>
+            <div class="services-container">
+                <h4>Services</h4>
+                <div class="grid-container">
+                    @for (service of services; track service){
+                        <app-service-card [service]="service"></app-service-card>
+                    }
+                </div>
+            </div>
         </div>
     </div>
     <div class="bottom"></div>

@@ -1,0 +1,8 @@
+<div class="service">
+    <div class="detail">
+        <div class="name">{{ service.serviceName }}</div>
+        <div class="price">Price: {{ service.price }}$</div>
+        <div class="status">Status <div class="indicator" [ngClass]="{'green': service.isActive}"></div>
+        <div class="category">{{ service.category }}</div>
+    </div>
+</div>
