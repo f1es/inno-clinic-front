@@ -5,10 +5,10 @@ import { HeaderComponent } from "../../header/header.component";
 @Component({
   selector: 'app-appointment-page',
   imports: [HeaderComponent],
-  templateUrl: './appointment-page.component.html',
-  styleUrl: './appointment-page.component.css'
+  templateUrl: './add-appointment-page.component.html',
+  styleUrl: './add-appointment-page.component.css'
 })
-export class AppointmentPageComponent {
+export class AddAppointmentPageComponent {
 
   private id = '';
 

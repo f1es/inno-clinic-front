@@ -3,7 +3,7 @@ import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
 import { OfficePageComponent } from './pages/office-page/office-page.component';
 import { RegisterPageComponent } from './pages/register-page/register-page.component';
-import { AppointmentPageComponent } from './pages/appointment-page/appointment-page.component';
+import { AddAppointmentPageComponent } from './pages/add-appointment-page/add-appointment-page.component';
 
 export const routes: Routes = [
     { path: '', redirectTo: 'login', pathMatch: 'full'},
@@ -11,6 +11,6 @@ export const routes: Routes = [
     { path: 'home', component: HomeComponent},
     { path: 'office/:id', component: OfficePageComponent},
     { path: 'register', component: RegisterPageComponent},
-    { path: 'office/:id/appointment', component: AppointmentPageComponent},
+    { path: 'office/:id/appointment', component: AddAppointmentPageComponent},
     { path: '**', component: LoginComponent}
 ];
