@@ -1,0 +1,32 @@
+<app-header></app-header>
+<div class="page-container">
+    <div class="logo">
+        <h4>INNO CLINIC</h4>
+    </div>
+    <div class="appointment-form">
+        <div class="form-group">
+            <label for="doctor">Doctor</label>
+            <select name="doctor" class="form-control"></select>
+            <p>
+        </div>
+        <div class="form-group">
+            <label for="service">Service</label>
+            <select name="service" class="form-control"></select>
+            <p>
+        </div>
+        <div class="form-group">
+            <label for="date">Day</label>
+            <input type="date" name="date" class="form-control" placeholder=""/>
+            <p>
+        </div>
+        <div class="form-group">
+            <label for="time">Time</label>
+            <select name="time" class="form-control"></select>
+            <p>
+        </div>
+        <div class="buttons">
+            <button class="btn btn-dark">Make an appointment</button>
+            <button class="btn" (click)="goBack()">Back</button>
+        </div>
+    </div>
+</div>

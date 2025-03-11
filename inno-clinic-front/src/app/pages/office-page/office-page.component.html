@@ -8,7 +8,7 @@
                 <div class="status" [innerHTML]="getStatus()"></div>
                 <div class="photo"><img [src]="office.photoId" alt=""></div>
             </div>
-            <div class="make-appointment">Make an appointment</div>
+            <div class="make-appointment" (click)="makeAppointment()">Make an appointment</div>
         </div>
         <div class="right">
             <div class="doctors-container">

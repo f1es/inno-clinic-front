@@ -1,0 +1,37 @@
+.page-container{
+    min-height: calc(100vh - 80px);
+    width: 100%;
+    background-color: brown;
+    align-content: center;
+
+    .logo{
+        position: absolute; 
+        top: 150px;
+        left: 37%;
+
+        h4{
+            font-size: 80px;        
+            color: white;
+            font-weight: bold;
+            font-family: 'Rubik', sans-serif;
+            letter-spacing: 2px;
+        }
+    }
+    .appointment-form{
+        align-items: center;
+        background-color: white;
+        border-radius: 10px;
+        font-family: 'Rubik', sans-serif;
+        font-weight: bold;
+        width: 25%;
+        padding: 1%;
+        margin: 0 auto;
+        height: 50%;
+
+        .buttons{
+            justify-content: space-between;
+            align-items: center;
+            display: flex;
+        }
+    }
+}
