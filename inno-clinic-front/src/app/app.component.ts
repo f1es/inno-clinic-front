@@ -1,5 +1,4 @@
 import { CommonModule } from '@angular/common';
-import { provideHttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { RouterOutlet } from '@angular/router';

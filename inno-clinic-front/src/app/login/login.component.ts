@@ -16,7 +16,7 @@ export class LoginComponent {
 
   constructor(private auth: AuthService, private router: Router) { }
 
-  login() : void{
+  public login() : void{
     if (this.username.trim().length === 0){
       this.errorMessage = "Username is required"
     }
@@ -33,5 +33,9 @@ export class LoginComponent {
         this.errorMessage = "Invalid credentials"
       }
     }
+  }
+
+  public register() : void{
+    this.router.navigate(['register']);
   }
 }
