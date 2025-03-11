@@ -1,4 +1,11 @@
 <div class="login-container">
+    <div class="carousel-container">
+        <p-carousel [value]="slides" [numVisible]="1" [numScroll]="1" [circular]="false" [showIndicators]="false" [showNavigators]="false" autoplayInterval="6000">
+            <ng-template pTemplate="item" let-item>
+                <img [src]="item.src" alt="{{item.alt}}">
+            </ng-template>          
+        </p-carousel>
+    </div>
     <div class="logo">INNO CLINIC</div>
     <div class="desc">description description description description description description description description description description description description description description description description description description description description description description description description description description description description description description</div>
     <div class="login-form">

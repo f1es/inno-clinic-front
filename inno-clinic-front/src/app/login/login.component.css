@@ -24,6 +24,12 @@
         width: 1200px;
         color: white;
     }
+    p-carousel {
+        img{
+            position: relative;
+            height: 952px;
+        }
+    }
     .login-form{
         width: 500px;
         height: 300px;
