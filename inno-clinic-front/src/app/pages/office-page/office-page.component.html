@@ -11,22 +11,16 @@
             <div class="make-appointment" (click)="makeAppointment()">Make an appointment</div>
         </div>
         <div class="right">
-            <div class="doctors-container">
-                <h4>Doctors</h4>
-                <div class="grid-container">
-                    @for (doctor of doctors; track doctor){
-                        <app-doctor-card [doctor]="doctor"></app-doctor-card>
-                    }
-                </div>
-            </div>
-            <div class="services-container">
-                <h4>Services</h4>
-                <div class="grid-container">
-                    @for (service of services; track service){
-                        <app-service-card [service]="service"></app-service-card>
-                    }
-                </div>
-            </div>
+            <app-expansion-container [header]="'Doctors'" [columns]="5">
+                @for (doctor of doctors; track doctor){
+                    <app-doctor-card [doctor]="doctor"></app-doctor-card>
+                }
+            </app-expansion-container>
+            <app-expansion-container [header]="'Services'" [columns]="5">
+                @for (service of services; track service){
+                    <app-service-card [service]="service"></app-service-card>
+                }
+            </app-expansion-container>
         </div>
     </div>
     <div class="bottom"></div>

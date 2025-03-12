@@ -22,8 +22,12 @@ export class HeaderComponent {
     this.role = this.roleService.getRole();
   }
 
-  public goHome(): void{
+  public toHomePage(): void{
     this.router.navigate(['home']);
+  }
+
+  public toAppointmentPage(): void{
+    this.router.navigate(['appointments']);
   }
 
   public logout(): void{

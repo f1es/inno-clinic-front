@@ -1,21 +1,7 @@
-/* styles.css */
 .panel {
     border-radius: 5px;
     margin-bottom: 10px;
-
-    .panel-toggle {
-        display: none;
-    }
-    .panel-toggle:checked + .panel-header + .panel-content {
-        /* max-height: 100px;*/
-        max-height: 100%;
-    }
     
-    .panel-toggle:checked + .panel-header .arrow {
-        transform: rotate(90deg);
-    }
-    
-
     .panel-header {
         padding: 10px;
         cursor: pointer;
@@ -34,23 +20,20 @@
         }
     
         .arrow {
-            transition: transform 0.2s ease-out;
+            right: 40px;
+            position: absolute;
             color: white;
-            display: inline-block;
         }
     }
 
     .panel-content {
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 0.2s ease-out;
+        max-height: 100%;
 
         .grid-container {
             display: grid;
-            grid-template-columns: auto auto auto auto auto auto auto;
             grid-gap: 10px;
             padding: 10px;
-            }
+        }
             
         .grid-container > div {
             text-align: center;

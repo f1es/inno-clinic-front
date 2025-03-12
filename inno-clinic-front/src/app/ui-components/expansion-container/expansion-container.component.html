@@ -1,12 +1,13 @@
 <div class="panel">
-    <input type="checkbox" id="panel" class="panel-toggle">
-    <label for="panel" class="panel-header">
+    <label for="panel" class="panel-header" (click)="changeState()">
         <h4>{{header}}</h4>
-        <span class="arrow">&#62;</span>
+        <div class="arrow">{{ isExpanded ? '-' : '+' }}</div>
     </label>
     <div class="panel-content">
-        <div class="grid-container">
-            <ng-content></ng-content>
-        </div>
+        @if (isExpanded){
+            <div class="grid-container" [ngStyle]="{'grid-template-columns': Columns}">
+                <ng-content></ng-content>
+            </div>
+        }
     </div>
 </div>

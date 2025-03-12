@@ -6,10 +6,11 @@ import { DoctorsService } from '../../services/doctors-service/doctors.service';
 import { DoctorCardComponent } from "../../cards/doctor-card/doctor-card.component";
 import { ServiceCardComponent } from "../../cards/service-card/service-card.component";
 import { ServicesService } from '../../services/services-service/services.service';
+import { ExpansionContainerComponent } from "../../ui-components/expansion-container/expansion-container.component";
 
 @Component({
   selector: 'app-office-page',
-  imports: [HeaderComponent, DoctorCardComponent, ServiceCardComponent],
+  imports: [HeaderComponent, DoctorCardComponent, ServiceCardComponent, ExpansionContainerComponent],
   templateUrl: './office-page.component.html',
   styleUrl: './office-page.component.css'
 })

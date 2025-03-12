@@ -54,29 +54,7 @@
         }
 
         .right{
-
-            .grid-container {
-                display: grid;
-                grid-template-columns: auto auto auto auto auto;
-                grid-gap: 10px;
-                padding: 10px;
-              }
-              
-            .grid-container > div {
-                text-align: center;
-                padding: 20px 0;
-                font-size: 30px;
-            }  
-
-            .doctors-container{
-                padding-left: 60px;
-                padding-top: 40px;
-            }
-
-            .services-container{
-                padding-left: 60px;
-                padding-top: 40px;
-            }
+            padding: 20px;
         }
     }
 

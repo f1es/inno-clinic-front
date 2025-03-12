@@ -4,10 +4,11 @@ import { HttpClient } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import { OfficeComponent } from "../cards/office/office.component";
 import { OfficesService } from '../services/offices-service/offices.service';
+import { ExpansionContainerComponent } from "../ui-components/expansion-container/expansion-container.component";
 
 @Component({
   selector: 'app-home',
-  imports: [HeaderComponent, CommonModule, OfficeComponent],
+  imports: [HeaderComponent, CommonModule, OfficeComponent, ExpansionContainerComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })

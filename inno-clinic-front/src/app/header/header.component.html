@@ -1,8 +1,8 @@
 <div class="header-container">
-    <div class="logo" (click)="goHome()">INNO CLINIC</div>
+    <div class="logo" (click)="toHomePage()">INNO CLINIC</div>
     <div class="buttons">
         @if (role === "doctor"){
-            <div class="appointments">Appointments</div>
+            <div class="appointments" (click)="toAppointmentPage()">Appointments</div>
         }
         <div class="profile">Profile</div>
         <div class="logout" (click)="logout()">Log out</div>
