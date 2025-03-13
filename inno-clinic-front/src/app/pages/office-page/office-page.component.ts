@@ -58,6 +58,6 @@ export class OfficePageComponent {
   }
 
   public makeAppointment(): void{
-    this.router.navigate([`office/${this.id}/appointment`]);
+    this.router.navigate([`offices/${this.id}/appointment`]);
   }
 }
