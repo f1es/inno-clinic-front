@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthService } from '../services/auth/auth.service';
 import { RoleService } from '../services/role-service/role.service';
+import { Role } from '../services/role-service/role.enum';
 
 @Component({
   selector: 'app-header',
@@ -11,12 +12,12 @@ import { RoleService } from '../services/role-service/role.service';
 })
 export class HeaderComponent {
 
-  public role: String = '';
+  public role: Role = Role.patient;
 
   constructor(
     private router: Router, 
     private auth: AuthService,
-    private roleService: RoleService) { }
+    protected roleService: RoleService) { }
 
   public ngOnInit(): void {
     this.role = this.roleService.getRole();
@@ -32,6 +33,10 @@ export class HeaderComponent {
 
   public toProfilePage(): void{
     this.router.navigate(['profile']);
+  }
+
+  public toOfficesPage(): void {
+    this.router.navigate(['offices']);
   }
 
   public logout(): void{

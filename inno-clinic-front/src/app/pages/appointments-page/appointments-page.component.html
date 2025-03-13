@@ -4,7 +4,9 @@
     <div class="today-appointments-thumbnail">
         <app-expansion-container [header]="'Appointments'" [columns]="7">
             @for (appointment of appointments; track appointment){
-                <app-appointment-card [appointment]="appointment"></app-appointment-card>
+                @if (!appointment.isApproved){
+                    <app-appointment-card [appointment]="appointment"></app-appointment-card>
+                }
             }
         </app-expansion-container>
     </div>
@@ -12,7 +14,9 @@
     <div class="appointments-thumbnail">
         <app-expansion-container [header]="'Todays Appointments'" [columns]="7">
             @for (appointment of appointments; track appointment){
-                <app-appointment-card [appointment]="appointment"></app-appointment-card>
+                @if (appointment.isApproved){
+                    <app-appointment-card [appointment]="appointment"></app-appointment-card>
+                }
             }
         </app-expansion-container>
     </div>
