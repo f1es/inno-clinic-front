@@ -30,6 +30,10 @@ export class HeaderComponent {
     this.router.navigate(['appointments']);
   }
 
+  public toProfilePage(): void{
+    this.router.navigate(['profile']);
+  }
+
   public logout(): void{
     this.auth.logout();
     this.router.navigate(['login'])

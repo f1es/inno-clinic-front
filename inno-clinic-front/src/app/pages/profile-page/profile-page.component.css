@@ -1,0 +1,32 @@
+.page-container{
+    width: 100%;
+    min-height: calc(100vh - 80px);
+    background-color: brown;
+    display: flex;
+    padding: 40px;
+
+    .left{
+        img{
+            width: 300px;
+            height: 300px;
+            border-radius: 15px;
+        }
+    }
+
+    .right{
+        margin-left: 3%;
+        background-color: white;
+        border-radius: 15px;
+        height: fit-content;
+
+        .details{
+            padding: 40px;
+            font-family: 'Rubik', sans-serif;
+            font-size: 32px;
+            position: relative;
+            .full-name{
+                font-weight: bold;
+            }
+        }
+    }
+}
