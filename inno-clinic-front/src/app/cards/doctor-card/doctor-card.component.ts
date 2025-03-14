@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { RoleService } from '../../services/role-service/role.service';
 
 @Component({
   selector: 'app-doctor-card',
@@ -7,7 +8,7 @@ import { Component, Input } from '@angular/core';
   styleUrl: './doctor-card.component.css'
 })
 export class DoctorCardComponent {
-  constructor() {}
+  constructor(protected roleService: RoleService) {}
 
   @Input() doctor: any;
 }

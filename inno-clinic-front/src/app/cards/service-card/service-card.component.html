@@ -5,4 +5,14 @@
         <div class="status">Status <div class="indicator" [ngClass]="{'green': service.isActive}"></div>
         <div class="category">{{ service.category }}</div>
     </div>
+    <div class="buttons">
+        @if(roleService.isReceptionist()){
+            <div class="trash">
+                <img src="trash.svg" alt="">
+            </div>
+            <div class="pencil">
+                <img src="pencil.svg" alt="">
+            </div>
+        }
+    </div>
 </div>

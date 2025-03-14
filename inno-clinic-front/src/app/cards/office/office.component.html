@@ -7,4 +7,14 @@
         <div class="phone">Phone {{ office.registryPhoneNumber }}</div>
         <div class="is-active">Status <div class="indicator" [ngClass]="{'green': office.isActive}"></div></div>
     </div>
+    <div class="buttons">
+        @if(roleService.isReceptionist()){
+            <div class="trash">
+                <img src="trash.svg" alt="">
+            </div>
+            <div class="pencil">
+                <img src="pencil.svg" alt="">
+            </div>
+        }
+    </div>
 </div>

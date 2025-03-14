@@ -3,12 +3,10 @@ import { Component, Input } from '@angular/core';
 import { Router } from '@angular/router';
 import { RoleService } from '../../services/role-service/role.service';
 import { Role } from '../../services/role-service/role.enum';
-import { NgIcon } from '@ng-icons/core';
-import { bootstrapTrash } from '@ng-icons/bootstrap-icons'
 
 @Component({
   selector: 'app-office',
-  imports: [NgClass, NgIcon],
+  imports: [NgClass],
   templateUrl: './office.component.html',
   styleUrl: './office.component.css'
 })

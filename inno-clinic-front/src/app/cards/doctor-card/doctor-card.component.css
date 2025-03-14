@@ -14,7 +14,29 @@
         margin-left: 5%;
         margin-top: 5%;
     }
+    
     .detail{
         padding-left: 10px;
+    }
+
+    .buttons{
+        display: flex;
+        padding-right: 10px;
+        justify-content: flex-end;
+        gap: 12px;
+        .trash{
+            cursor: pointer;
+            img{
+                height: 24px;
+                width: 24px;
+            }
+        }
+        .pencil{
+            cursor: pointer;
+            img{
+                height: 22px;
+                width: 22px;
+            }
+        }
     }
 }

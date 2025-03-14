@@ -38,4 +38,26 @@
             }
         }
     }
+    .buttons{
+        display: flex;
+        padding-right: 10px;
+        padding-top: 8px;
+        justify-content: flex-end;
+        .trash{
+            padding: 4px;
+            cursor: pointer;
+            img{
+                height: 24px;
+                width: 24px;
+            }
+        }
+        .pencil{
+            padding: 4px;
+            cursor: pointer;
+            img{
+                height: 22px;
+                width: 22px;
+            }
+        }
+    }
 }

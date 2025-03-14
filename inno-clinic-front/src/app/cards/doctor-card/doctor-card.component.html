@@ -8,4 +8,14 @@
         <div class="start-year">Start career at {{ doctor.careerStartYear }}</div>
         <div class="status">{{ doctor.status }}</div>
     </div>
+    <div class="buttons">
+        @if(roleService.isReceptionist()){
+            <div class="trash">
+                <img src="trash.svg" alt="">
+            </div>
+            <div class="pencil">
+                <img src="pencil.svg" alt="">
+            </div>
+        }
+    </div>
 </div>

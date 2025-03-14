@@ -37,4 +37,24 @@
             }
         }
     }
+
+    .buttons{
+        display: flex;
+        justify-content: flex-end;
+        gap: 12px;
+        .trash{
+            cursor: pointer;
+            img{
+                height: 24px;
+                width: 24px;
+            }
+        }
+        .pencil{
+            cursor: pointer;
+            img{
+                height: 22px;
+                width: 22px;
+            }
+        }
+    }
 }
