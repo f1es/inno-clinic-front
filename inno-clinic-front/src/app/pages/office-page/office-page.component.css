@@ -15,7 +15,7 @@
         }
 
         .left{
-            width: 450px;
+            width: 500px;
             padding-left: 60px;
             .office-container{
                 background-color: white;
@@ -27,7 +27,7 @@
                     font-weight: bold;
                 }
                 .photo{
-                    width: 100%;
+                    width: 400px;
                     height: 400px;
                     margin-right: 50px;
                     margin-top: 10px;
@@ -56,8 +56,5 @@
         .right{
             padding: 20px;
         }
-    }
-
-
-    
+    } 
 }

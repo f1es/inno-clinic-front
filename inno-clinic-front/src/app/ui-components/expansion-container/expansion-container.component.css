@@ -19,7 +19,7 @@
             padding-left: 10px;
         }
     
-        .arrow {
+        .plus {
             right: 40px;
             position: absolute;
             color: white;
@@ -29,16 +29,34 @@
     .panel-content {
         max-height: 100%;
 
-        .grid-container {
-            display: grid;
-            grid-gap: 10px;
-            padding: 10px;
+        .flex-container {
+            display: flex;
+            grid-gap: 6px;
+            padding: 8px;
+            flex-wrap: wrap;
         }
             
-        .grid-container > div {
+        .flex-container > div {
             text-align: center;
-            padding: 20px 0;
-            font-size: 30px;
+            font-size: 26px;
+            width:6.5lh;
+            min-height: 75px;
+        }
+
+        .add-space{
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            font-family: 'Rubik', sans-serif;
+            color: white;
+            border: solid 2px white;
+            border-radius: 15px;
+            position: relative;
+            height: inherit;
+
+            .plus{
+                padding-left: 48%;
+            }
         }
     }
 }

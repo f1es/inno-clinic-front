@@ -1,13 +1,21 @@
 <div class="panel">
     <label for="panel" class="panel-header" (click)="changeState()">
         <h4>{{header}}</h4>
-        <div class="arrow">{{ isExpanded ? '-' : '+' }}</div>
+        <div class="plus">{{ isExpanded ? '-' : '+' }}</div>
     </label>
     <div class="panel-content">
         @if (isExpanded){
-            <div class="grid-container" [ngStyle]="{'grid-template-columns': Columns}">
-                <ng-content></ng-content>
+            <div class="flex-container" >
+                    <ng-content></ng-content>
+                @if (canAdd){
+
+                    <div class="add-space" (click)="addElementFunction()">
+                        <div class="plus">+</div>
+                    </div>
+                }
             </div>
         }
     </div>
 </div>
+
+<!-- [ngStyle]="{'grid-template-columns': Columns}" -->

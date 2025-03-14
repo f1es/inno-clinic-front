@@ -2,9 +2,9 @@
 <div class="home-container">
     <div class="all-offices">
         <div class="office-thumbnail">
-            <app-expansion-container header="Offices" [columns]="7">
+            <app-expansion-container header="Offices" [canAdd]="roleService.isReceptionist()">
                 @for (office of offices; track office) {
-                    <app-office class="col-2" [office]="office"></app-office>
+                    <app-office [office]="office"></app-office>
                 }
             </app-expansion-container>
         </div>

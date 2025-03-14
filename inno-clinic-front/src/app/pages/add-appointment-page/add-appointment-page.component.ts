@@ -19,6 +19,6 @@ export class AddAppointmentPageComponent {
   }
 
   public goBack(): void{
-    this.router.navigate([`office/${this.id}`]);
+    this.router.navigate([`offices/${this.id}`]);
   }
 }

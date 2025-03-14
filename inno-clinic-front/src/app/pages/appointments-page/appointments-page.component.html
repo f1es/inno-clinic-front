@@ -1,18 +1,16 @@
 <app-header></app-header>
 <div class="page-container">
 
-    <div class="today-appointments-thumbnail">
-        <app-expansion-container [header]="'Appointments'" [columns]="7">
+    <div class="appointments">
+        <app-expansion-container header="Appointments">
             @for (appointment of appointments; track appointment){
                 @if (!appointment.isApproved){
                     <app-appointment-card [appointment]="appointment"></app-appointment-card>
                 }
             }
         </app-expansion-container>
-    </div>
 
-    <div class="appointments-thumbnail">
-        <app-expansion-container [header]="'Todays Appointments'" [columns]="7">
+        <app-expansion-container header="Todays Appointments">
             @for (appointment of appointments; track appointment){
                 @if (appointment.isApproved){
                     <app-appointment-card [appointment]="appointment"></app-appointment-card>

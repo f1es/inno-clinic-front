@@ -7,6 +7,7 @@ import { DoctorCardComponent } from "../../cards/doctor-card/doctor-card.compone
 import { ServiceCardComponent } from "../../cards/service-card/service-card.component";
 import { ServicesService } from '../../services/services-service/services.service';
 import { ExpansionContainerComponent } from "../../ui-components/expansion-container/expansion-container.component";
+import { RoleService } from '../../services/role-service/role.service';
 
 @Component({
   selector: 'app-office-page',
@@ -26,6 +27,7 @@ export class OfficePageComponent {
     private officeSerivce: OfficesService,
     private doctorsService: DoctorsService,
     private servicesService: ServicesService,
+    protected roleService: RoleService,
     private router: Router) { }
     
   public ngOnInit(): void {
@@ -59,5 +61,13 @@ export class OfficePageComponent {
 
   public makeAppointment(): void{
     this.router.navigate([`offices/${this.id}/appointment`]);
+  }
+
+  public addDoctor(): void{
+
+  }
+
+  public addService(): void{
+    
   }
 }
