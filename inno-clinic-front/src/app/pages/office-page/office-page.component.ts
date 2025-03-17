@@ -8,6 +8,9 @@ import { ServiceCardComponent } from "../../cards/service-card/service-card.comp
 import { ServicesService } from '../../services/services-service/services.service';
 import { ExpansionContainerComponent } from "../../ui-components/expansion-container/expansion-container.component";
 import { RoleService } from '../../services/role-service/role.service';
+import { DoctorModalComponent } from '../../modals/doctor-modal/doctor-modal.component';
+import { MatDialog } from '@angular/material/dialog';
+import { ServiceModalComponent } from '../../modals/service-modal/service-modal.component';
 
 @Component({
   selector: 'app-office-page',
@@ -28,7 +31,8 @@ export class OfficePageComponent {
     private doctorsService: DoctorsService,
     private servicesService: ServicesService,
     protected roleService: RoleService,
-    private router: Router) { }
+    private router: Router,
+    private dialog: MatDialog) { }
     
   public ngOnInit(): void {
     this.id = this.route.snapshot.params['id'];
@@ -63,11 +67,11 @@ export class OfficePageComponent {
     this.router.navigate([`offices/${this.id}/appointment`]);
   }
 
-  public addDoctor(): void{
-
+  public addDoctor: Function = () => {
+    const dialogRef = this.dialog.open(DoctorModalComponent);
   }
 
-  public addService(): void{
-    
+  public addService: Function = () => {
+    const dialogRef = this.dialog.open(ServiceModalComponent);
   }
 }

@@ -5,6 +5,8 @@ import { ExpansionContainerComponent } from "../../ui-components/expansion-conta
 import { OfficeComponent } from "../../cards/office/office.component";
 import { HeaderComponent } from "../../header/header.component";
 import { RoleService } from '../../services/role-service/role.service';
+import { MatDialog } from '@angular/material/dialog';
+import { OfficeModalComponent } from '../../modals/office-modal/office-modal.component';
 
 @Component({
   selector: 'app-offices-page',
@@ -15,7 +17,10 @@ import { RoleService } from '../../services/role-service/role.service';
 export class OfficesPageComponent {
  public offices: any;
   
-  constructor(private http: HttpClient, private officesSerivce: OfficesService, protected roleService: RoleService) { }
+  constructor(
+    private officesSerivce: OfficesService, 
+    protected roleService: RoleService,
+    public dialog: MatDialog) { }
   
    public ngOnInit(): void {
     this.getOfficesAssets();
@@ -26,4 +31,8 @@ export class OfficesPageComponent {
       this.offices = offices;
     });
   }
+
+  public addOffice: Function = () => {
+    const dialogRef = this.dialog.open(OfficeModalComponent);
+  };
 }

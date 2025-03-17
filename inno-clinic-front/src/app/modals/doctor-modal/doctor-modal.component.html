@@ -1,0 +1,29 @@
+<h2 mat-dialog-title>Doctor</h2>
+<div class="dialog-container">
+    <div class="doctor-form">
+        <div class="form-group">
+            <label for="form-control">Birthday</label>
+            <input type="date" class="form-control" [min]="getMinBirthday()" [max]="getMaxBirthday()">
+            <p>
+        </div>
+        <div class="form-group">
+            <label for="form-control">Specialization</label>
+            <select name="specialization" class="form-control"></select>
+            <p>
+        </div>
+        <div class="form-group">
+            <label>Office</label>
+            <select name="office" class="form-control"></select>
+            <p>
+        </div>
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="text" class="form-control" placeholder="email@gmail.com">
+            <p>
+        </div>
+        <div class="buttons">
+            <button class="btn btn-dark" mat-dialog-close>Accept</button>
+            <button class="btn" mat-dialog-close>Back</button>
+        </div>
+    </div>
+</div>

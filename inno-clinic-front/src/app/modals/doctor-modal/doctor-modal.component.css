@@ -1,0 +1,19 @@
+.dialog-container{
+    width: 500px;
+    height: 460px;
+    padding: 20px;
+
+    .doctor-form{
+        background-color: white;
+        border-radius: 10px;
+        font-family: 'Rubik', sans-serif;
+        font-weight: bold;
+
+        .buttons{
+            padding-top: 70px;
+            justify-content: space-between;
+            align-items: center;
+            display: flex;
+        }
+    }
+}
