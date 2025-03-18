@@ -16,7 +16,7 @@
         </div>
         <div class="form-group">
             <label for="date">Day</label>
-            <input type="date" name="date" class="form-control" placeholder=""/>
+            <input type="date" name="date" class="form-control" [min]="getMinDate()" [max]="getMaxDate()" placeholder=""/>
             <p>
         </div>
         <div class="form-group">

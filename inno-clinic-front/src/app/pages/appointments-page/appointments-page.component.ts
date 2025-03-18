@@ -3,6 +3,7 @@ import { HeaderComponent } from "../../header/header.component";
 import { AppointmentCardComponent } from "../../cards/appointment-card/appointment-card.component";
 import { AppointmentsService } from '../../services/appointments-service/appointments.service';
 import { ExpansionContainerComponent } from "../../ui-components/expansion-container/expansion-container.component";
+import { RoleService } from '../../services/role-service/role.service';
 
 @Component({
   selector: 'app-appointments-page',
@@ -13,7 +14,9 @@ import { ExpansionContainerComponent } from "../../ui-components/expansion-conta
 export class AppointmentsPageComponent {
   public appointments: any;
 
-  constructor(private appointmentService: AppointmentsService) {}
+  constructor(
+    private appointmentService: AppointmentsService,
+    protected roleService: RoleService) {}
 
   public ngOnInit(): void{
     this.getAppointments();
