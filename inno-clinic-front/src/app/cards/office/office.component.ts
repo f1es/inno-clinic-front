@@ -5,6 +5,8 @@ import { RoleService } from '../../services/role-service/role.service';
 import { Role } from '../../services/role-service/role.enum';
 import { MatDialog } from '@angular/material/dialog';
 import { OfficeModalComponent } from '../../modals/office-modal/office-modal.component';
+import { WarningModalComponent } from '../../modals/warning-modal/warning-modal.component';
+import { OfficesService } from '../../services/offices-service/offices.service';
 
 @Component({
   selector: 'app-office',
@@ -17,6 +19,7 @@ export class OfficeComponent {
   constructor(
     private router: Router, 
     protected roleService: RoleService,
+    private officeService: OfficesService,
     private dialog: MatDialog) { }
 
   @Input() office: any;
@@ -35,4 +38,13 @@ export class OfficeComponent {
         isEdit: true, 
         office: this.office }});
     };
+
+  public onDelete(): void{
+      let dialogRef = this.dialog.open(WarningModalComponent, {
+        data: { 
+          action: this.officeService.deleteDelegate,
+          param: this.office.id
+        }
+      });
+    }
 }

@@ -11,4 +11,8 @@ export class ServicesService {
   public getAll(): any {
     return this.http.get("http://localhost:4200/assets/data/services.json");
   }
+
+  public deleteDelegate: Function = (id: string) => {
+    this.http.delete(`httpppppp/${id}`);
+  }
 }
