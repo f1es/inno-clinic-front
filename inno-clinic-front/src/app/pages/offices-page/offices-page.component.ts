@@ -33,6 +33,6 @@ export class OfficesPageComponent {
   }
 
   public addOffice: Function = () => {
-    const dialogRef = this.dialog.open(OfficeModalComponent);
+    const dialogRef = this.dialog.open(OfficeModalComponent, { data: { isEdit: false }});
   };
 }

@@ -8,12 +8,13 @@
         border-radius: 10px;
         font-family: 'Rubik', sans-serif;
         font-weight: bold;
-
+        
         .buttons{
             padding-top: 70px;
             justify-content: space-between;
             align-items: center;
             display: flex;
+            margin-top: auto;
         }
     }
 }

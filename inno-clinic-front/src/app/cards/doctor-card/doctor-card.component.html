@@ -10,10 +10,10 @@
     </div>
     <div class="buttons">
         @if(roleService.isReceptionist()){
-            <div class="trash">
+            <div class="trash" (click)="onDelete()">
                 <img src="trash.svg" alt="">
             </div>
-            <div class="pencil">
+            <div class="pencil" (click)="onEdit()">
                 <img src="pencil.svg" alt="">
             </div>
         }

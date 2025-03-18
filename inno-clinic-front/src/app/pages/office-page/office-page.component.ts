@@ -68,10 +68,10 @@ export class OfficePageComponent {
   }
 
   public addDoctor: Function = () => {
-    const dialogRef = this.dialog.open(DoctorModalComponent);
+    const dialogRef = this.dialog.open(DoctorModalComponent, {data: { isEdit: false }});
   }
 
   public addService: Function = () => {
-    const dialogRef = this.dialog.open(ServiceModalComponent);
+    const dialogRef = this.dialog.open(ServiceModalComponent, { data: { idEdit: false }});
   }
 }
