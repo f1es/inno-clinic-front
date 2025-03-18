@@ -4,18 +4,33 @@
     </div>
     <div class="register-form">
         <div class="form-group">
-            <label for="uname">Email</label>
-            <input type="text" name="uname" class="form-control" placeholder="email@gmail.com"/>
+            <label for="fname">First name</label>
+            <input type="text" name="fname" class="form-control" placeholder="name" [(ngModel)]="firstName"/>
+            <p>
+        </div>
+        <div class="form-group">
+            <label for="lname">Last name</label>
+            <input type="text" name="lname" class="form-control" placeholder="last name" [(ngModel)]="lastName"/>
+            <p>
+        </div>
+        <div class="form-group">
+            <label for="mname">Middle name</label>
+            <input type="text" name="mname" class="form-control" placeholder="middle name" [(ngModel)]="middleName"/>
+            <p>
+        </div>
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="text" name="email" class="form-control" placeholder="email@gmail.com" [(ngModel)]="email"/>
             <p>
         </div>
         <div class="form-group">
             <label for="password">Password</label>
-            <input type="text" name="password" class="form-control" placeholder="password"/>
+            <input type="text" name="password" class="form-control" placeholder="password" [(ngModel)]="password"/>
             <p>
         </div>
         <div class="form-group">
             <label for="phone">Phone</label>
-            <input type="text" name="phone" class="form-control" placeholder="+375 (33) 333-33-33"/>
+            <input type="text" name="phone" class="form-control" placeholder="+375 (33) 333-33-33" [(ngModel)]="phone"/>
             <p>
         </div>
         <div class="form-group">
@@ -24,8 +39,10 @@
             <p>
         </div>
 
+        <div class="error">{{ error }}</div>
+
         <div class="buttons">
-            <button class="btn btn-dark">Sign up</button>
+            <button class="btn btn-dark" (click)="register()">Sign up</button>
             <button class="btn" (click)="goBack()">Back</button>
         </div>
     </div>

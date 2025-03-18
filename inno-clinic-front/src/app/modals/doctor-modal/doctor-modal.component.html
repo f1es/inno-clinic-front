@@ -21,7 +21,7 @@
 
         <div class="form-group">
             <label for="form-control">Birthday</label>
-            <input matInput  type="date" class="form-control" [min]="getMinBirthday()" [max]="getMaxBirthday()" [value]="dateOfBirth">
+            <input matInput  type="date" class="form-control" [min]="getMinBirthday()" [max]="getMaxBirthday()" [value]="dateOfBirth" onkeydown="return false;">
             <p>
         </div>
         <div class="form-group">
