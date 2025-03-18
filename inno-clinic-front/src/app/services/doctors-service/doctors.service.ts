@@ -6,9 +6,17 @@ import { Injectable } from '@angular/core';
 })
 export class DoctorsService {
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {  }
 
   public getAll(): any{
     return this.http.get("http://localhost:4200/assets/data/doctors.json");
+  }
+
+  public deleteDelegate: Function = (id: string) => {
+    this.http.delete(`httpppppp/${id}`);
+  }
+
+  public delete(id: string): void{ 
+    this.http.delete(`httpppppp/${id}`);
   }
 }

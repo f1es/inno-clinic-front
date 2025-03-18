@@ -2,7 +2,7 @@
 <div class="page-container">
 
     <div class="appointments">
-        <app-expansion-container header="Appointments">
+        <app-expansion-container header="Appointments" [canAdd]="false">
             @for (appointment of appointments; track appointment){
                 @if (!appointment.isApproved){
                     <app-appointment-card [appointment]="appointment"></app-appointment-card>
@@ -10,7 +10,7 @@
             }
         </app-expansion-container>
 
-        <app-expansion-container header="Todays Appointments">
+        <app-expansion-container header="Todays Appointments" [canAdd]="false">
             @for (appointment of appointments; track appointment){
                 @if (appointment.isApproved){
                     <app-appointment-card [appointment]="appointment"></app-appointment-card>

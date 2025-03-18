@@ -2,6 +2,7 @@ import { Component, Input } from '@angular/core';
 import { RoleService } from '../../services/role-service/role.service';
 import { MatDialog } from '@angular/material/dialog';
 import { DoctorModalComponent } from '../../modals/doctor-modal/doctor-modal.component';
+import { WarningModalComponent } from '../../modals/warning-modal/warning-modal.component';
 import { DoctorsService } from '../../services/doctors-service/doctors.service';
 
 @Component({
@@ -24,6 +25,15 @@ export class DoctorCardComponent {
       data: { 
         isEdit: true,
         doctor: this.doctor
+      }
+    });
+  }
+
+  public onDelete(): void{
+    let dialogRef = this.dialog.open(WarningModalComponent, {
+      data: { 
+        action: this.doctorServie.deleteDelegate,
+        param: this.doctor.id
       }
     });
   }
