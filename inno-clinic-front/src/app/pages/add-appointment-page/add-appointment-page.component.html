@@ -5,23 +5,54 @@
     </div>
     <div class="appointment-form">
         <div class="form-group">
+            <label for="office">Office</label>
+            <select name="office" class="form-control" disabled>
+                <option [value]="office" selected>{{ office.address }}</option>
+            </select>
+            <p>
+        </div>
+        <div class="form-group">
             <label for="doctor">Doctor</label>
-            <select name="doctor" class="form-control"></select>
+            <select name="doctor" class="form-control" (change)="onDoctorSelect()" [(ngModel)]="doctor">
+                <option value="" hidden selected></option>
+                @for (doctor of doctors; track doctor){
+                    <option [value]="doctor.id">{{doctor.firstName}} {{doctor.lastName}} {{doctor.middleName}}</option>
+                }
+            </select>
             <p>
         </div>
         <div class="form-group">
             <label for="service">Service</label>
-            <select name="service" class="form-control"></select>
+            <select name="service" class="form-control" [disabled]="!isDoctorSelected" (change)="onServiceSelect()">
+                <option value="" hidden selected></option>
+                @for (service of services; track service){
+                    <option [value]="service.id">{{service.serviceName}}</option>
+                }
+            </select>
             <p>
         </div>
-        <div class="form-group">
+        <div class="form-group date">
             <label for="date">Day</label>
-            <input type="date" name="date" class="form-control" [min]="getMinDate()" [max]="getMaxDate()" placeholder="" onkeydown="return false;"/>
+            <input  type="date" 
+                    name="date" 
+                    class="form-control" 
+                    [min]="getMinDate()" 
+                    [max]="getMaxDate()" 
+                    (change)="onDaySelect()" 
+                    placeholder="" 
+                    onkeydown="return false;"
+                    [value]="day"
+                    [disabled]="!isServiceSelected"/>
             <p>
         </div>
         <div class="form-group">
             <label for="time">Time</label>
-            <select name="time" class="form-control"></select>
+            <select name="time" class="form-control" [disabled]="!isServiceSelected || !isDaySelected">
+                <option value="" hidden selected></option>
+                @for (time of freeTimes; track time){
+                    <option [value]="time">{{time}}</option>
+                }
+            </select>
             <p>
         </div>
         <div class="buttons">

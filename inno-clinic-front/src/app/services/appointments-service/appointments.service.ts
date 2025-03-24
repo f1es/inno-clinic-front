@@ -15,4 +15,11 @@ export class AppointmentsService {
   public getAll(): any{
     return this.http.get("http://localhost:4200/assets/data/appointments.json");
   }
+
+  public getFreeTimesOfDay(day: Date, serviceTime: number): any{
+    return this.http.post("", { 
+        day: day, 
+        minutes: serviceTime 
+      });
+  }
 }

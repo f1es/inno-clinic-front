@@ -12,6 +12,10 @@ export class DoctorsService {
     return this.http.get("http://localhost:4200/assets/data/doctors.json");
   }
 
+  public getForOffice(officeId: string): any{
+    return this.http.get("http://localhost:4200/assets/data/doctors.json");
+  }
+
   public deleteDelegate: Function = (id: string) => {
     this.http.delete(`httpppppp/${id}`);
   }
