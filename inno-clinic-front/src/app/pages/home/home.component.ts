@@ -3,10 +3,12 @@ import { HeaderComponent } from "../../header/header.component";
 import { HttpClient } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import { OfficesService } from '../../services/offices-service/offices.service';
+import { CarouselModule } from 'primeng/carousel';
+import { OfficeComponent } from "../../cards/office/office.component";
 
 @Component({
   selector: 'app-home',
-  imports: [HeaderComponent, CommonModule],
+  imports: [HeaderComponent, CommonModule, CarouselModule, OfficeComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })

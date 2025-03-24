@@ -3,13 +3,19 @@
     <div class="greeting">
         <h4>Welcome</h4>
     </div>
-    <!-- <div class="all-offices">
-        <div class="office-thumbnail">
-            <app-expansion-container header="Offices" [columns]="7">
-                @for (office of offices; track office) {
-                    <app-office class="col-2" [office]="office"></app-office>
-                }
-            </app-expansion-container>
-        </div>
-    </div> -->
+    <div class="message">You can make an appointment, or not ¯\_(ツ)_/¯</div>
+    <div class="carouesel">
+        <p-carousel [value]="offices" 
+                    [numVisible]="7" 
+                    [numScroll]="1" 
+                    [circular]="true"
+                    [showIndicators]="false"
+                    [showNavigators]="false" 
+                    autoplayInterval="2000"
+                    carousel.content.gap="120">
+                    <ng-template pTemplate="item" let-item>
+                        <app-office [office]="item"></app-office>
+                    </ng-template>
+        </p-carousel>
+    </div>
 </div>
