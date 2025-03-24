@@ -6,10 +6,27 @@
     padding: 40px;
 
     .left{
-        img{
+        #profile-photo{
             width: 300px;
             height: 300px;
             border-radius: 15px;
+        }
+
+        .change-photo-button{
+            
+            .file-label{
+                font-family: 'Rubik', sans-serif;
+                font-size: 18px;
+                cursor: pointer; 
+                padding: 10px; 
+                color: white;
+                margin-left: 25%;
+                text-decoration: underline;
+            }
+
+            #file-input{
+                display: none;
+            }
         }
     }
 

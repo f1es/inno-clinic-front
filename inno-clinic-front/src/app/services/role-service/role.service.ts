@@ -9,7 +9,7 @@ export class RoleService {
   constructor() { }
 
   public getRole(): Role {
-    return Role.receptionist;
+    return Role.doctor;
   }
 
   public isReceptionist(): boolean {
