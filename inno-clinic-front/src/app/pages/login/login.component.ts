@@ -3,6 +3,7 @@ import { FormsModule } from '@angular/forms';
 import { AuthService } from '../../services/auth/auth.service';
 import { Router } from '@angular/router';
 import { CarouselModule } from 'primeng/carousel';
+import { HttpResponse } from '@angular/common/http';
 
 @Component({
   selector: 'app-login',
@@ -31,13 +32,15 @@ export class LoginComponent {
     }
     else{
       this.errorMessage = "";
-      let response = this.auth.login(this.username, this.password);
-      if (response === 200){
-        this.router.navigate(['home']);
-      }
-      else if (response === 401){
-        this.errorMessage = "Invalid credentials"
-      }
+      const response = this.auth.login(this.username, this.password);
+      response.subscribe((response: HttpResponse<any>) => {
+        if (response.status === 200){
+          this.router.navigate(['home']);
+        }
+        else{
+          this.errorMessage = "Invalid credentials"
+        }
+      });
     }
   }
 

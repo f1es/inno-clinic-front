@@ -1,23 +1,27 @@
 import { Injectable } from '@angular/core';
+import { BehaviorSubject, firstValueFrom, Observable } from 'rxjs';
+import { HttpClient, HttpResponse } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
 
-  constructor() { }
+  constructor(private http: HttpClient) { }
 
-  login(username: string, password: string){
-    if (username === "123" && password === "123"){
-      return 200;
+  private roleSubject = new BehaviorSubject<string | undefined>(undefined);
+  role$: Observable<string | undefined> = this.roleSubject.asObservable();
+
+  public login(email: string, password: string): Observable<HttpResponse<any>>{
+    const data: any = {
+      email: email,
+      password: password
     }
-    else
-    {
-      return 401;
-    }
+
+    return this.http.post('https://localhost:44366/api/accounts/login', data, {observe: 'response'});
   }
 
-  logout(){
+  public logout(): any{
     
   }
 }
