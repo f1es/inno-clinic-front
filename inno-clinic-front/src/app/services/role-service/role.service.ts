@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Role } from './role.enum';
 import { Store } from '@ngrx/store';
-import { Observable } from 'rxjs';
+import { finalize, map, Observable } from 'rxjs';
 import { setRole } from './role.reducer';
 
 @Injectable({
@@ -12,25 +12,26 @@ export class RoleService {
   constructor(private store: Store<{ role: string }>) { }
 
 
-  public getRole(): Observable<string> {
-    return this.store.select('role');
+  public getRole(): Observable<Role> {
+    return this.store.select('role').pipe(
+      map(data => this.parseRole(data))
+    );
   }
 
-  public setRole(jwt: string): void{
+  public setRoleFromJwt(jwt: string): void{
     const role = this.getRoleFromJwt(jwt);
     this.store.dispatch(setRole({ role }));
-    // TODO: Put role to storage
   }
 
-  public isReceptionist(): boolean {
-    return this.getRole() === Role.receptionist;
+  public isReceptionist(role: Role): boolean {
+    return role === Role.receptionist;
   }
 
-  public isDoctor(): boolean {
-    return this.getRole() === Role.doctor;
+  public isDoctor(role: Role): boolean {
+    return role === Role.doctor;
   }
 
-  private parseRole(role: string): Role{
+  public parseRole(role: string): Role{
     switch(role){
       case Role.doctor:
         return Role.doctor;

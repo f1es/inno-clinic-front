@@ -20,7 +20,9 @@ export class HeaderComponent {
     protected roleService: RoleService) { }
 
   public ngOnInit(): void {
-    this.role = this.roleService.getRole();
+    this.roleService.getRole().subscribe((role) => {
+      this.role = this.roleService.parseRole(role);
+    });
   }
 
   public toHomePage(): void{

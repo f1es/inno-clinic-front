@@ -11,13 +11,13 @@
             <div class="make-appointment" (click)="makeAppointment()">Make an appointment</div>
         </div>
         <div class="right">
-            <app-expansion-container header="Doctors" [addElementFunction]="addDoctor" [canAdd]="roleService.isReceptionist()">
+            <app-expansion-container header="Doctors" [addElementFunction]="addDoctor" [canAdd]="roleService.isReceptionist(role)">
                 @for (doctor of doctors; track doctor){
                     <app-doctor-card [doctor]="doctor"></app-doctor-card>
                 }
             </app-expansion-container>
 
-            <app-expansion-container header="Services" [addElementFunction]="addService" [canAdd]="roleService.isReceptionist()">
+            <app-expansion-container header="Services" [addElementFunction]="addService" [canAdd]="roleService.isReceptionist(role)">
                 @for (service of services; track service){
                     <app-service-card [service]="service"></app-service-card>
                 }

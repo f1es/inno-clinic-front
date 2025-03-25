@@ -19,7 +19,9 @@ export class ProfilePageComponent {
     private profileService: ProfileService) {}
 
   public ngOnInit(): void {
-    this.role = this.roleService.getRole();
+    this.roleService.getRole().subscribe((role) => {
+      this.role = role;
+    });
 
     this.profileService.getAccountInfo("").subscribe((account: any) => {
       this.account = account;

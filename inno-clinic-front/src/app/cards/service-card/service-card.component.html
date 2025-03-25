@@ -6,7 +6,7 @@
         <div class="category">{{ service.category }}</div>
     </div>
     <div class="buttons">
-        @if(roleService.isReceptionist()){
+        @if(roleService.isReceptionist(role)){
             <div class="trash" (click)="onDelete()">
                 <img src="trash.svg" alt="">
             </div>

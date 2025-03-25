@@ -9,9 +9,6 @@ export class AuthService {
 
   constructor(private http: HttpClient) { }
 
-  private roleSubject = new BehaviorSubject<string | undefined>(undefined);
-  role$: Observable<string | undefined> = this.roleSubject.asObservable();
-
   public login(email: string, password: string): Observable<HttpResponse<any>>{
     const data: any = {
       email: email,

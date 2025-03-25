@@ -4,6 +4,7 @@ import { AuthService } from '../../services/auth/auth.service';
 import { Router } from '@angular/router';
 import { CarouselModule } from 'primeng/carousel';
 import { HttpResponse } from '@angular/common/http';
+import { RoleService } from '../../services/role-service/role.service';
 
 @Component({
   selector: 'app-login',
@@ -21,7 +22,10 @@ export class LoginComponent {
     {src: 'coffin.png', alt: ''}
   ];
 
-  constructor(private auth: AuthService, private router: Router) { }
+  constructor(
+    private auth: AuthService,
+    private router: Router,
+    private roleService: RoleService) { }
 
   public login() : void{
     if (this.username.trim().length === 0){
@@ -35,6 +39,7 @@ export class LoginComponent {
       const response = this.auth.login(this.username, this.password);
       response.subscribe((response: HttpResponse<any>) => {
         if (response.status === 200){
+          this.roleService.setRoleFromJwt(response.body.accessToken);
           this.router.navigate(['home']);
         }
         else{

@@ -7,6 +7,7 @@ import { HeaderComponent } from "../../header/header.component";
 import { RoleService } from '../../services/role-service/role.service';
 import { MatDialog } from '@angular/material/dialog';
 import { OfficeModalComponent } from '../../modals/office-modal/office-modal.component';
+import { Role } from '../../services/role-service/role.enum';
 
 @Component({
   selector: 'app-offices-page',
@@ -15,8 +16,9 @@ import { OfficeModalComponent } from '../../modals/office-modal/office-modal.com
   styleUrl: './offices-page.component.css'
 })
 export class OfficesPageComponent {
- public offices: any;
-  
+  public offices: any;
+  public role: Role = Role.patient;
+
   constructor(
     private officesSerivce: OfficesService, 
     protected roleService: RoleService,
@@ -24,6 +26,9 @@ export class OfficesPageComponent {
   
    public ngOnInit(): void {
     this.getOfficesAssets();
+    this.roleService.getRole().subscribe((role) => {
+      this.role = role;
+    });
    }
 
   public getOfficesAssets(): void{

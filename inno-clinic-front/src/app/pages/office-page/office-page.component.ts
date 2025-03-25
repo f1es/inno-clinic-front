@@ -11,6 +11,7 @@ import { RoleService } from '../../services/role-service/role.service';
 import { DoctorModalComponent } from '../../modals/doctor-modal/doctor-modal.component';
 import { MatDialog } from '@angular/material/dialog';
 import { ServiceModalComponent } from '../../modals/service-modal/service-modal.component';
+import { Role } from '../../services/role-service/role.enum';
 
 @Component({
   selector: 'app-office-page',
@@ -24,6 +25,7 @@ export class OfficePageComponent {
   public services: any;
   public office: any;
   public id: string = '';
+  public role: Role = Role.patient;
 
   constructor(
     private route: ActivatedRoute, 
@@ -39,6 +41,9 @@ export class OfficePageComponent {
     this.getOffice(this.id);
     this.getDoctors();
     this.getServices();
+    this.roleService.getRole().subscribe((role) => {
+      this.role = role;
+    });
   }
 
   public getOffice(id: string) {

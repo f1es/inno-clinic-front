@@ -30,7 +30,9 @@ export class OfficeComponent {
   }
 
   public ngOnInit(): void {
-    this.role = this.roleService.getRole();
+    this.roleService.getRole().subscribe((role) => {
+      this.role = role;
+    });
   }
 
   public onEdit(): void{
