@@ -7,9 +7,6 @@ import { provideHttpClient } from '@angular/common/http';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { providePrimeNG } from 'primeng/config';
 import Aura from '@primeng/themes/aura';
-import { provideStore } from '@ngrx/store';
-import { roleReducer } from './services/role-service/role.reducer';
-import { authReducer } from './services/auth/auth.reducer';
 
 export const appConfig: ApplicationConfig = {
   providers: [provideZoneChangeDetection({ eventCoalescing: true }), provideRouter(routes), provideHttpClient(),  provideAnimationsAsync(),
@@ -17,9 +14,5 @@ export const appConfig: ApplicationConfig = {
         theme: {
             preset: Aura
         }
-    }),
-    provideStore({ 
-        role: roleReducer,
-        isAuth: authReducer 
     })]
 };
