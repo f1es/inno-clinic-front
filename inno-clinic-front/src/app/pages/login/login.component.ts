@@ -39,7 +39,6 @@ export class LoginComponent {
       const response = this.auth.login(this.username, this.password);
       response.subscribe((response: HttpResponse<any>) => {
         if (response.status === 200){
-          this.roleService.setRoleFromJwt(response.body.accessToken);
           this.router.navigate(['home']);
         }
         else{

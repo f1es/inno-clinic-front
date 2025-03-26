@@ -7,6 +7,8 @@ import { Injectable } from '@angular/core';
 export class OfficesService {
   constructor(private http: HttpClient) { }
 
+  private url: string = "http://localhost:5002";
+
   public getById(id: string): any{
     return this.http.get("http://localhost:4200/assets/data/office.json");
   }

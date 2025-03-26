@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Role } from './role.enum';
 import { Store } from '@ngrx/store';
-import { finalize, map, Observable } from 'rxjs';
+import { map, Observable } from 'rxjs';
 import { setRole } from './role.reducer';
 
 @Injectable({

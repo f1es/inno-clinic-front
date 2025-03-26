@@ -7,16 +7,17 @@ import { AddAppointmentPageComponent } from './pages/add-appointment-page/add-ap
 import { AppointmentsPageComponent } from './pages/appointments-page/appointments-page.component';
 import { ProfilePageComponent } from './pages/profile-page/profile-page.component';
 import { OfficesPageComponent } from './pages/offices-page/offices-page.component';
+import { authGuard } from './guards/auth.guard';
 
 export const routes: Routes = [
     { path: '', redirectTo: 'login', pathMatch: 'full'},
-    { path: 'login', component: LoginComponent},
-    { path: 'home', component: HomeComponent},
-    { path: 'offices/:id', component: OfficePageComponent},
-    { path: 'offices', component: OfficesPageComponent},
+    { path: 'login', component: LoginComponent },
+    { path: 'home', component: HomeComponent, canActivate: [authGuard] },
+    { path: 'offices/:id', component: OfficePageComponent, canActivate: [authGuard]},
+    { path: 'offices', component: OfficesPageComponent, canActivate: [authGuard]},
     { path: 'register', component: RegisterPageComponent},
-    { path: 'offices/:id/appointment', component: AddAppointmentPageComponent},
-    { path: 'appointments', component: AppointmentsPageComponent},
-    { path: 'profile', component: ProfilePageComponent},
+    { path: 'offices/:id/appointment', component: AddAppointmentPageComponent, canActivate: [authGuard]},
+    { path: 'appointments', component: AppointmentsPageComponent, canActivate: [authGuard]},
+    { path: 'profile', component: ProfilePageComponent, canActivate: [authGuard]},
     { path: '**', component: LoginComponent}
 ];
