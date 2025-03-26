@@ -3,7 +3,6 @@ import { map, Observable, tap } from 'rxjs';
 import { HttpClient, HttpResponse } from '@angular/common/http';
 import { RoleService } from '../role-service/role.service';
 import { Store } from '@ngrx/store';
-import { setIsAuth } from './auth.reducer';
 
 @Injectable({
   providedIn: 'root'
@@ -28,8 +27,7 @@ export class AuthService {
       withCredentials: true
     }).pipe(tap((response: HttpResponse<any>) => {
       if (response.status === 200){
-        this.roleService.setRoleFromJwt(response.body.accessToken);
-        this.store.dispatch(setIsAuth( {isAuth: true} ));
+        localStorage.setItem('access', response.body.accessToken);
       }
     }));
   }
@@ -47,14 +45,13 @@ export class AuthService {
       withCredentials: true
     }).subscribe((response: HttpResponse<any>) => {
       if (response.status === 204){
-        this.store.dispatch(setIsAuth( {isAuth: false} ));
+        console.log(response);
+        localStorage.removeItem('access');
       }
     });
   }
 
-  public isAuthenticated(): Observable<boolean>{
-    return this.store.select('isAuth').pipe(tap((bool) => {
-      console.log(bool);
-    }));
+  public isAuthenticated(): boolean{
+    return !!localStorage.getItem('access');
   }
 }

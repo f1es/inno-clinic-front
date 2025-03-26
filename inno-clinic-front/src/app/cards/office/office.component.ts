@@ -23,16 +23,9 @@ export class OfficeComponent {
     private dialog: MatDialog) { }
 
   @Input() office: any;
-  public role: Role = Role.patient;
 
   public goToOffice(id: string) : void {
     this.router.navigate(['offices', id]);
-  }
-
-  public ngOnInit(): void {
-    this.roleService.getRole().subscribe((role) => {
-      this.role = role;
-    });
   }
 
   public onEdit(): void{

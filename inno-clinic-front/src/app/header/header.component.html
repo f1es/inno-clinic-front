@@ -2,7 +2,7 @@
     <div class="logo" (click)="toHomePage()">INNO CLINIC</div>
     <div class="buttons">
         <div class="offices" (click)="toOfficesPage()">Offices</div>
-        @if (roleService.isDoctor(role)){
+        @if (roleService.isDoctor()){
             <div class="appointments" (click)="toAppointmentPage()">Appointments</div>
         }
         <div class="profile" (click)="toProfilePage()">Profile</div>

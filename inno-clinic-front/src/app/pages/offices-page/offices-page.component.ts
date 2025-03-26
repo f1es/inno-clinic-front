@@ -17,7 +17,6 @@ import { Role } from '../../services/role-service/role.enum';
 })
 export class OfficesPageComponent {
   public offices: any;
-  public role: Role = Role.patient;
 
   constructor(
     private officesSerivce: OfficesService, 
@@ -26,9 +25,6 @@ export class OfficesPageComponent {
   
    public ngOnInit(): void {
     this.getOfficesAssets();
-    this.roleService.getRole().subscribe((role) => {
-      this.role = role;
-    });
    }
 
   public getOfficesAssets(): void{

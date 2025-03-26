@@ -1,37 +1,32 @@
 import { Injectable } from '@angular/core';
 import { Role } from './role.enum';
-import { Store } from '@ngrx/store';
-import { map, Observable } from 'rxjs';
-import { setRole } from './role.reducer';
 
 @Injectable({
   providedIn: 'root'
 })
 export class RoleService {
 
-  constructor(private store: Store<{ role: string }>) { }
+  constructor() { }
 
-
-  public getRole(): Observable<Role> {
-    return this.store.select('role').pipe(
-      map(data => this.parseRole(data))
-    );
+  public getRole(): Role {
+    const token = localStorage.getItem('access');
+    if (token == null){
+      return Role.patient;
+    }
+    else{
+      return this.getRoleFromJwt(token);
+    }
   }
 
-  public setRoleFromJwt(jwt: string): void{
-    const role = this.getRoleFromJwt(jwt);
-    this.store.dispatch(setRole({ role }));
+  public isReceptionist(): boolean {
+    return this.getRole() === Role.receptionist;
   }
 
-  public isReceptionist(role: Role): boolean {
-    return role === Role.receptionist;
+  public isDoctor(): boolean {
+    return this.getRole() === Role.doctor;
   }
 
-  public isDoctor(role: Role): boolean {
-    return role === Role.doctor;
-  }
-
-  public parseRole(role: string): Role{
+  private parseRole(role: string): Role{
     switch(role){
       case Role.doctor:
         return Role.doctor;

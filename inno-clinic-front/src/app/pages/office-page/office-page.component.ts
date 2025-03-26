@@ -25,7 +25,6 @@ export class OfficePageComponent {
   public services: any;
   public office: any;
   public id: string = '';
-  public role: Role = Role.patient;
 
   constructor(
     private route: ActivatedRoute, 
@@ -41,9 +40,6 @@ export class OfficePageComponent {
     this.getOffice(this.id);
     this.getDoctors();
     this.getServices();
-    this.roleService.getRole().subscribe((role) => {
-      this.role = role;
-    });
   }
 
   public getOffice(id: string) {

@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { HeaderComponent } from "../../header/header.component";
 import { RoleService } from '../../services/role-service/role.service';
 import { ProfileService } from '../../services/profile-service/profile.service';
+import { Role } from '../../services/role-service/role.enum';
 
 @Component({
   selector: 'app-profile-page',
@@ -12,17 +13,12 @@ import { ProfileService } from '../../services/profile-service/profile.service';
 export class ProfilePageComponent {
   public account: any;
   public profile: any;
-  public role: String = "";
 
   constructor(
-    private roleService: RoleService, 
+    protected roleService: RoleService, 
     private profileService: ProfileService) {}
 
   public ngOnInit(): void {
-    this.roleService.getRole().subscribe((role) => {
-      this.role = role;
-    });
-
     this.profileService.getAccountInfo("").subscribe((account: any) => {
       this.account = account;
     });
@@ -31,20 +27,20 @@ export class ProfilePageComponent {
   }
 
   private getProfileInfo(): void{
-    switch(this.role){
-      case "receptionist": 
+    switch(this.roleService.getRole()){
+      case Role.receptionist: 
         this.profileService.getReceptionistProfile("").subscribe((receptionist: any) => {
           this.profile = receptionist;
         });
         break;
 
-      case "doctor":
+      case Role.doctor:
         this.profileService.getDoctorProfile("").subscribe((doctor: any) => {
           this.profile = doctor;
         });
         break;
 
-      case "":
+      case Role.patient:
         this.profileService.getPatientProfile("").subscribe((patient: any) => {
           this.profile = patient;
         });

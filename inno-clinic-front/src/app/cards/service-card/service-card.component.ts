@@ -21,13 +21,6 @@ export class ServiceCardComponent {
     protected dialog: MatDialog) {}
 
   @Input() public service: any;
-  public role: Role = Role.patient;
-
-  public ngOnInit(): void{
-    this.roleService.getRole().subscribe((role) => {
-      this.role = role;
-    });
-  }
 
   public onEdit(): void{
       let dialogRef = this.dialog.open(ServiceModalComponent, {

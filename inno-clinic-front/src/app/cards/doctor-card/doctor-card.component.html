@@ -9,7 +9,7 @@
         <div class="status">{{ doctor.status }}</div>
     </div>
     <div class="buttons">
-        @if(roleService.isReceptionist(role)){
+        @if(roleService.isReceptionist()){
             <div class="trash" (click)="onDelete()">
                 <img src="trash.svg" alt="">
             </div>
