@@ -9,8 +9,7 @@ import { Store } from '@ngrx/store';
 })
 export class AuthService {
 
-  private url: string = "http://localhost:5006"; // https://localhost:44366 http://localhost:5006
-
+  private url: string = "http://localhost:5006";
   constructor(
     private http: HttpClient,
     private roleService: RoleService,
