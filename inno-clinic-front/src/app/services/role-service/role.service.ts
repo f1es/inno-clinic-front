@@ -1,21 +1,22 @@
 import { Injectable } from '@angular/core';
 import { Role } from './role.enum';
+import { StorageService } from '../storage-service/storage.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class RoleService {
 
-  constructor() { }
+  constructor(private storage: StorageService) { }
 
   public getRole(): Role {
-    const token = localStorage.getItem('access');
-    if (token == null){
-      return Role.patient;
-    }
-    else{
+    const token = this.storage.getAccessToken();
+    if (token){
       return this.getRoleFromJwt(token);
     }
+    else {
+      return Role.patient;
+    }    
   }
 
   public isReceptionist(): boolean {
@@ -40,22 +41,21 @@ export class RoleService {
   } 
 
   private getRoleFromJwt(jwt: string): Role{
-    const payload = this.decodeJwt(jwt);
-    return this.parseRole(payload.role);
+    try{
+      const payload = this.decodeJwt(jwt);
+      return this.parseRole(payload.role);
+    }
+    catch (error){
+      return Role.patient;
+    }
   }
 
   private decodeJwt(token: string): any {
-    try {
       const base64Url = token.split('.')[1];
       const base64 = base64Url.replace(/-/g, '+').replace(/_/g, '/');
       const jsonPayload = decodeURIComponent(atob(base64).split('').map(c =>
         '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2)
       ).join(''));
-      
       return JSON.parse(jsonPayload);
-    } catch (e) {
-      console.error('jwt decode error:', e);
-      return null;
-    }
   }
 }

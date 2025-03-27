@@ -5,6 +5,7 @@ import { Router } from '@angular/router';
 import { CarouselModule } from 'primeng/carousel';
 import { HttpResponse } from '@angular/common/http';
 import { RoleService } from '../../services/role-service/role.service';
+import { combineLatest } from 'rxjs';
 
 @Component({
   selector: 'app-login',
