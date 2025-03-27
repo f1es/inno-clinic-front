@@ -12,8 +12,7 @@ export class AuthService {
   private url: string = "http://localhost:5006";
   constructor(
     private http: HttpClient,
-    private roleService: RoleService,
-    private store: Store<{ isAuth: boolean }>) { }
+    private roleService: RoleService) { }
 
   public login(email: string, password: string): Observable<HttpResponse<any>>{
     const data: any = {
@@ -44,7 +43,6 @@ export class AuthService {
       withCredentials: true
     }).subscribe((response: HttpResponse<any>) => {
       if (response.status === 204){
-        console.log(response);
         localStorage.removeItem('access');
       }
     });

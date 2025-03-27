@@ -8,6 +8,7 @@ import { AppointmentsPageComponent } from './pages/appointments-page/appointment
 import { ProfilePageComponent } from './pages/profile-page/profile-page.component';
 import { OfficesPageComponent } from './pages/offices-page/offices-page.component';
 import { authGuard } from './guards/auth.guard';
+import { Role } from './services/role-service/role.enum';
 
 export const routes: Routes = [
     { path: '', redirectTo: 'login', pathMatch: 'full'},
@@ -17,7 +18,7 @@ export const routes: Routes = [
     { path: 'offices', component: OfficesPageComponent, canActivate: [authGuard]},
     { path: 'register', component: RegisterPageComponent},
     { path: 'offices/:id/appointment', component: AddAppointmentPageComponent, canActivate: [authGuard]},
-    { path: 'appointments', component: AppointmentsPageComponent, canActivate: [authGuard]},
+    { path: 'appointments', component: AppointmentsPageComponent, canActivate: [authGuard], data: { Roles: [Role.doctor] }},
     { path: 'profile', component: ProfilePageComponent, canActivate: [authGuard]},
     { path: '**', component: LoginComponent}
 ];
