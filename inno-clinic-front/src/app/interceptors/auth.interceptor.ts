@@ -1,26 +1,32 @@
 import { HttpErrorResponse, HttpInterceptorFn, HttpRequest, HttpResponse } from '@angular/common/http';
 import { inject } from '@angular/core';
 import { AuthService } from '../services/auth/auth.service';
-import { catchError, of, switchMap, throwError } from 'rxjs';
+import { catchError, map, of, switchMap, tap, throwError } from 'rxjs';
 import { StorageService } from '../services/storage-service/storage.service';
+import { Router } from '@angular/router';
 
 export const authInterceptor: HttpInterceptorFn = (req, next) => {
   const authService = inject(AuthService);
   const storage = inject(StorageService);
+  const router = inject(Router);
 
   req = addAccessTokenToRequest(req);
 
-  console.log(req);
-
   return next(req).pipe(
     catchError((error: HttpErrorResponse) => {
-
-      if (error.status === 401 && authService.isTokenExpired() && storage.hasTokens()) { 
+      if (error.status === 401) { 
         return authService.refresh().pipe(
-          switchMap(() => next(addAccessTokenToRequest(req))), catchError(() => {
+          
+          switchMap(() => {
+            return next(addAccessTokenToRequest(req));
+
+          }), catchError(() => {
             storage.resetTokens();
-            return throwError(() => error)
-          }));
+            router.navigate(['login']);
+            return throwError(() => error);
+
+          })
+        )
       }
       
       return throwError(() => error);

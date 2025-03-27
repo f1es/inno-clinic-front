@@ -64,23 +64,6 @@ export class AuthService {
     return !!this.storage.getAccessToken();
   }
 
-  public isTokenExpired(): boolean{
-    const token = this.storage.getAccessToken();
-    if (!token) {
-      return false;
-    }
-
-    try {
-      const decodedToken: any = this.decodeJwt(token);
-      const expirationTime = decodedToken.exp;
-      const currentTime = Math.floor(Date.now() / 1000);
-      return expirationTime <= currentTime;
-
-    } catch (error) {
-      return false;
-    }
-  }
-
   private decodeJwt(token: string): any {
     const base64Url = token.split('.')[1];
     const base64 = base64Url.replace(/-/g, '+').replace(/_/g, '/');
