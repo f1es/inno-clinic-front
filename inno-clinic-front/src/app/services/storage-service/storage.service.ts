@@ -26,7 +26,7 @@ export class StorageService {
     return localStorage.getItem(this.refreshName);
   }
 
-  public resetTokens(): void {
+  public removeTokens(): void {
     localStorage.removeItem(this.accessName);
     localStorage.removeItem(this.refreshName);
   }
