@@ -19,10 +19,6 @@ export class HeaderComponent {
     private auth: AuthService,
     protected roleService: RoleService) { }
 
-  public ngOnInit(): void {
-    this.role = this.roleService.getRole();
-  }
-
   public toHomePage(): void{
     this.router.navigate(['home']);
   }
@@ -41,6 +37,6 @@ export class HeaderComponent {
 
   public logout(): void{
     this.auth.logout();
-    this.router.navigate(['login'])
+    this.router.navigate(['login']);
   }
 }

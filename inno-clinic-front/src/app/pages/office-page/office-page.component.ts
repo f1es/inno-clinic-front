@@ -11,6 +11,8 @@ import { RoleService } from '../../services/role-service/role.service';
 import { DoctorModalComponent } from '../../modals/doctor-modal/doctor-modal.component';
 import { MatDialog } from '@angular/material/dialog';
 import { ServiceModalComponent } from '../../modals/service-modal/service-modal.component';
+import { Role } from '../../services/role-service/role.enum';
+import { HttpResponse } from '@angular/common/http';
 
 @Component({
   selector: 'app-office-page',
@@ -22,7 +24,9 @@ export class OfficePageComponent {
 
   public doctors: any;
   public services: any;
-  public office: any;
+  public office: any = {
+    address: ""
+  };
   public id: string = '';
 
   constructor(
@@ -42,8 +46,8 @@ export class OfficePageComponent {
   }
 
   public getOffice(id: string) {
-    this.officeSerivce.getById(id).subscribe((office: any) => {
-      this.office = office;
+    this.officeSerivce.getById(id).subscribe((response: HttpResponse<any>) => {
+      this.office = response.body;
     });
   }
 

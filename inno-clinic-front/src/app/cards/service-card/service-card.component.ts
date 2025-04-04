@@ -5,6 +5,7 @@ import { MatDialog } from '@angular/material/dialog';
 import { ServiceModalComponent } from '../../modals/service-modal/service-modal.component';
 import { WarningModalComponent } from '../../modals/warning-modal/warning-modal.component';
 import { ServicesService } from '../../services/services-service/services.service';
+import { Role } from '../../services/role-service/role.enum';
 
 @Component({
   selector: 'app-service-card',
@@ -20,7 +21,7 @@ export class ServiceCardComponent {
     protected dialog: MatDialog) {}
 
   @Input() public service: any;
-  
+
   public onEdit(): void{
       let dialogRef = this.dialog.open(ServiceModalComponent, {
         data: { 

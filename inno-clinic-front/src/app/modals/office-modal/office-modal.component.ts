@@ -35,11 +35,3 @@ export class OfficeModalComponent {
     this.photoId = this.data.office.photoId;
   }
 }
-
-
-
-// "id": "4a073513-8fd4-402e-b85e-ff0987f9b354",
-// "address": "ylica Ylichnaya",
-// "registryPhoneNumber": "234-56-78",
-// "isActive": false,
-// "photoId": "https://i.ibb.co/ZzrH355/image.jpg"

@@ -18,17 +18,17 @@
             <div class="full-name">{{ profile.firstName }} {{ profile.lastName }} {{ profile.middleName }}</div>
             <div class="email">Email: {{ account.email }}</div>
             <div class="phone">Phone: {{ account.phoneNumber }}</div>
-            @if (role == "doctor"){
+            @if (roleService.isDoctor()){
                 <div class="birthday">Birthday: {{ profile.dateOfBirth }}</div>
                 <div class="office">Office: {{ "office id" }}</div>
                 <div class="specialization">Specialization: {{ "specialization id" }}</div>
             }
     
-            @if (role == "receptionist"){
+            @if (roleService.isReceptionist()){
                 <div class="office">{{ "office id" }}</div>
             }
     
-            @if (role == "patient"){
+            @if (roleService.getRole() === ""){
                 <div class="birthday">{{ profile.dateOfBirth }}</div>
             }
         </div>
