@@ -1,0 +1,27 @@
+<app-header></app-header>
+<div class="page-container">
+    <div class="top">
+        <div class="left">
+            <div class="office-container">
+                <div class="address">{{ office.address }}</div>
+                <div class="phone">{{ office.registryPhoneNumber }}</div>
+                <div class="status" [innerHTML]="getStatus()"></div>
+                <div class="photo"><img [src]="office.photoId" alt=""></div>
+            </div>
+            <div class="make-appointment" (click)="makeAppointment()">Make an appointment</div>
+        </div>
+        <div class="right">
+            <app-expansion-container header="Doctors" [addElementFunction]="addDoctor" [canAdd]="roleService.isReceptionist()">
+                @for (doctor of doctors; track doctor){
+                    <app-doctor-card [doctor]="doctor"></app-doctor-card>
+                }
+            </app-expansion-container>
+
+            <app-expansion-container header="Services" [addElementFunction]="addService" [canAdd]="roleService.isReceptionist()">
+                @for (service of services; track service){
+                    <app-service-card [service]="service"></app-service-card>
+                }
+            </app-expansion-container>
+        </div>
+    </div>
+</div>

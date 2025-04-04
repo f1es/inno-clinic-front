@@ -1,0 +1,20 @@
+<div class="office">
+    <div class="cover">
+        <img [src]="office.photoId" (click)="goToOffice(office.id)"/>
+    </div>
+    <div class="detail">
+        <div class="address">{{ office.address }}</div>
+        <div class="phone">Phone {{ office.registryPhoneNumber }}</div>
+        <div class="is-active">Status <div class="indicator" [ngClass]="{'green': office.isActive}"></div></div>
+    </div>
+    <div class="buttons">
+        @if(roleService.isReceptionist()){
+            <div class="trash" (click)="onDelete()">
+                <img src="trash.svg" alt="">
+            </div>
+            <div class="pencil" (click)="onEdit()">
+                <img src="pencil.svg" alt="">
+            </div>
+        }
+    </div>
+</div>

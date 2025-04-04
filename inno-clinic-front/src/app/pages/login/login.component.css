@@ -1,0 +1,66 @@
+.login-container{
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(135deg, #474747 0%, #d15959 100%);
+    position: relative;
+    .logo{
+        font-size: 80px;
+        font-weight: bold;
+        font-family: 'Rubik', sans-serif;
+        letter-spacing: 2px;
+        position: absolute;
+        top: 50px;
+        right: 50px;
+        color: white;
+    }
+    .desc{
+        font-size: 24px; 
+        font-family: 'Rubik', sans-serif;
+        letter-spacing: 0.5px;
+        position: absolute;
+        top: 200px;
+        right: 50px;
+        text-align: right;
+        width: 1200px;
+        color: white;
+    }
+    p-carousel {
+        img{
+            position: relative;
+            height: 952px;
+        }
+    }
+    .login-form{
+        width: 500px;
+        height: 300px;
+        padding: 20px;
+        background-color: white;
+        border-radius: 10px;
+        position: absolute;
+        bottom: 50px;
+        right: 50px;
+        box-shadow: 5px 5px;
+        .form-group{
+            margin-top: 20px;
+        }
+        label{
+            font-family: 'Rubik', sans-serif;
+            font-weight: bold;
+        }
+        .btn-container{
+            position: relative;
+            .btn{
+                margin-top: 20px;
+                margin-right: 10px;
+                width: 80px;
+            }
+            .error{
+                position: absolute;
+                top: 32px;
+                right: 0;
+                color: red;
+            }
+        }
+    
+    }
+}

@@ -1,0 +1,28 @@
+<div class="login-container">
+    <div class="carousel-container">
+        <p-carousel [value]="slides" [numVisible]="1" [numScroll]="1" [circular]="true" [showIndicators]="false" [showNavigators]="false" autoplayInterval="9000">
+            <ng-template pTemplate="item" let-item>
+                <img [src]="item.src" alt="{{item.alt}}">
+            </ng-template>          
+        </p-carousel>
+    </div>
+    <div class="logo">INNO CLINIC</div>
+    <div class="desc">eh vot bi zakrit stajy</div>
+    <div class="login-form">
+        <div class="form-group">
+            <label for="uname">Email</label>
+            <input type="text" name="uname" class="form-control" placeholder="email@gmail.com" [(ngModel)]="username"/>
+            <p>
+        </div>
+        <div class="form-group">
+            <label for="pword">Password</label>
+            <p>
+            <input type="text" name="pword" class="form-control" placeholder="password" [(ngModel)]="password"/>
+        </div>
+        <div class="btn-container">
+            <div class="error">{{ errorMessage }}</div>
+            <button class="btn btn-dark" (click)="login()">Sign in</button>
+            <button class="btn" (click)="register()">Sign up</button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,21 @@
+<div class="doctor">
+    <div class="photo">
+        <img [src]="doctor.photoId"/>
+    </div>
+    <div class="detail">
+        <div class="name">{{ doctor.firstName }} {{ doctor.middleName }} {{ doctor.lastName }} </div>
+        <div class="age">{{ doctor.dateOfBirth }}</div>
+        <div class="start-year">Start career at {{ doctor.careerStartYear }}</div>
+        <div class="status">{{ doctor.status }}</div>
+    </div>
+    <div class="buttons">
+        @if(roleService.isReceptionist()){
+            <div class="trash" (click)="onDelete()">
+                <img src="trash.svg" alt="">
+            </div>
+            <div class="pencil" (click)="onEdit()">
+                <img src="pencil.svg" alt="">
+            </div>
+        }
+    </div>
+</div>

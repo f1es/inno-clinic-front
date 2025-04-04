@@ -1,0 +1,43 @@
+.register-container{
+    min-height: 100vh;
+    width: 100%;
+    background-color: brown;
+    align-content: center;
+
+    .logo{
+        position: absolute; 
+        top: 50px;
+        left: 36.5%;
+
+        h4{
+            font-size: 80px;        
+            color: white;
+            font-weight: bold;
+            font-family: 'Rubik', sans-serif;
+            letter-spacing: 2px;
+        }
+    }
+    .register-form{
+        align-items: center;
+        background-color: white;
+        border-radius: 10px;
+        font-family: 'Rubik', sans-serif;
+        font-weight: bold;
+        width: 25%;
+        padding: 1%;
+        margin: 0 auto;
+        height: 50%;
+
+        .buttons{
+            justify-content: space-between;
+            align-items: center;
+            display: flex;
+        }
+
+        .error{
+            color: red;
+            font-weight: lighter;
+            padding-bottom: 10px;
+        }
+    }
+}

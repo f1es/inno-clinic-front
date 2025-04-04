@@ -1,0 +1,8 @@
+.page-container{
+    min-height: calc(100vh - 80px);
+    background-color: brown;
+    padding: 20px;
+    font-family: 'Rubik', sans-serif;
+    display: flex;
+
+}

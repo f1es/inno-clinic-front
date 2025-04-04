@@ -1,0 +1,65 @@
+.panel {
+    border-radius: 5px;
+    margin-bottom: 10px;
+    
+    .panel-header {
+        padding: 10px;
+        cursor: pointer;
+        font-weight: bold;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    
+        h4{
+            font-family: 'Rubik', sans-serif;
+            color: white;
+            font-weight: bold;
+            border-left: 5px solid;
+            text-transform: uppercase;
+            padding-left: 10px;
+        }
+    
+        .plus {
+            right: 40px;
+            position: absolute;
+            color: white;
+        }
+    }
+
+    .panel-content {
+        max-height: 100%;
+
+        .flex-container {
+            display: flex;
+            grid-gap: 6px;
+            padding: 8px;
+            flex-wrap: wrap;
+        }
+            
+        .flex-container > div {
+            text-align: center;
+            font-size: 26px;
+            width:6.5lh;
+            min-height: 75px;
+        }
+
+        .add-space{
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            font-family: 'Rubik', sans-serif;
+            color: white;
+            border: solid 2px white;
+            border-radius: 15px;
+            position: relative;
+            height: inherit;
+
+            .plus{
+                padding-left: 48%;
+            }
+        }
+    }
+}
+
+
+

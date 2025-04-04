@@ -1,0 +1,50 @@
+[
+    {
+        "id": "ae491e0d-e5d3-42a0-f1b4-08dd6076bbef",
+        "serviceName": "Servicnity service",
+        "price": 310,
+        "isActive": true,
+        "specializationId": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+        "serviceCategoryId": "bf51150f-a99a-427f-c3e6-08dd56543af7"
+    },
+    {
+        "id": "ae491e0d-e5d3-42a0-f1b4-08dd6076bbef",
+        "serviceName": "Servisov service",
+        "price": 210,
+        "isActive": true,
+        "specializationId": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+        "serviceCategoryId": "bf51150f-a99a-427f-c3e6-08dd56543af7"
+    },
+    {
+        "id": "ae491e0d-e5d3-42a0-f1b4-08dd6076bbef",
+        "serviceName": "string",
+        "price": 0,
+        "isActive": false,
+        "specializationId": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+        "serviceCategoryId": "bf51150f-a99a-427f-c3e6-08dd56543af7"
+    },
+    {
+        "id": "ae491e0d-e5d3-42a0-f1b4-08dd6076bbef",
+        "serviceName": "prikol",
+        "price": 1110,
+        "isActive": true,
+        "specializationId": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+        "serviceCategoryId": "bf51150f-a99a-427f-c3e6-08dd56543af7"
+    },
+    {
+        "id": "ae491e0d-e5d3-42a0-f1b4-08dd6076bbef",
+        "serviceName": "ykol",
+        "price": 10,
+        "isActive": false,
+        "specializationId": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+        "serviceCategoryId": "bf51150f-a99a-427f-c3e6-08dd56543af7"
+    },
+    {
+        "id": "ae491e0d-e5d3-42a0-f1b4-08dd6076bbef",
+        "serviceName": "prokol",
+        "price": 10,
+        "isActive": true,
+        "specializationId": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+        "serviceCategoryId": "bf51150f-a99a-427f-c3e6-08dd56543af7"
+    }
+]

@@ -1,0 +1,18 @@
+<div class="service">
+    <div class="detail">
+        <div class="name">{{ service.serviceName }}</div>
+        <div class="price">Price: {{ service.price }}$</div>
+        <div class="status">Status <div class="indicator" [ngClass]="{'green': service.isActive}"></div>
+        <div class="category">{{ service.category }}</div>
+    </div>
+    <div class="buttons">
+        @if(roleService.isReceptionist()){
+            <div class="trash" (click)="onDelete()">
+                <img src="trash.svg" alt="">
+            </div>
+            <div class="pencil" (click)="onEdit()">
+                <img src="pencil.svg" alt="">
+            </div>
+        }
+    </div>
+</div>

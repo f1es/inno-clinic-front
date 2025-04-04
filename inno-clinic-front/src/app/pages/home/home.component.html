@@ -1,0 +1,21 @@
+<app-header></app-header>
+<div class="home-container">
+    <div class="greeting">
+        <h4>Welcome</h4>
+    </div>
+    <div class="message">You can make an appointment, or not ¯\_(ツ)_/¯</div>
+    <div class="carouesel">
+        <p-carousel [value]="offices" 
+                    [numVisible]="7" 
+                    [numScroll]="1" 
+                    [circular]="true"
+                    [showIndicators]="false"
+                    [showNavigators]="false" 
+                    autoplayInterval="2000"
+                    carousel.content.gap="120">
+                    <ng-template pTemplate="item" let-item>
+                        <app-office [office]="item"></app-office>
+                    </ng-template>
+        </p-carousel>
+    </div>
+</div>

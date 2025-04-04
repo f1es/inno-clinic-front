@@ -1,0 +1,86 @@
+[
+    {
+      "id": "05bd4b09-bbd3-414e-f452-08dd5d68f07e",
+      "firstName": "ivan",
+      "lastName": "ivanov",
+      "middleName": "ivanovich",
+      "dateOfBirth": "2025-03-07",
+      "careerStartYear": 2007,
+      "status": "v potoke",
+      "accountId": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+      "specializationId": "d71f7674-acad-4f9d-162e-08dd5d68474c",
+      "officeId": "3fa85f64-5717-4562-b3fc-2c963f66afa6"
+    },
+    {
+      "id": "094f93fd-2c43-49a1-cc1c-08dd5fcdffbe",
+      "firstName": "string",
+      "lastName": "string",
+      "middleName": "string",
+      "dateOfBirth": "2025-03-10",
+      "careerStartYear": 2000,
+      "status": "string",
+      "accountId": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+      "specializationId": "d71f7674-acad-4f9d-162e-08dd5d68474c",
+      "officeId": "3fa85f64-5717-4562-b3fc-2c963f66afa6"
+    },
+    {
+      "id": "094f93fd-2c43-49a1-cc1c-08dd5fcdffbe",
+      "firstName": "string",
+      "lastName": "string",
+      "middleName": "string",
+      "dateOfBirth": "2025-03-10",
+      "careerStartYear": 2000,
+      "status": "string",
+      "accountId": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+      "specializationId": "d71f7674-acad-4f9d-162e-08dd5d68474c",
+      "officeId": "3fa85f64-5717-4562-b3fc-2c963f66afa6"
+    },
+    {
+      "id": "05bd4b09-bbd3-414e-f452-08dd5d68f07e",
+      "firstName": "ivan",
+      "lastName": "ivanov",
+      "middleName": "ivanovich",
+      "dateOfBirth": "2025-03-07",
+      "careerStartYear": 2007,
+      "status": "v potoke",
+      "accountId": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+      "specializationId": "d71f7674-acad-4f9d-162e-08dd5d68474c",
+      "officeId": "3fa85f64-5717-4562-b3fc-2c963f66afa6"
+    },
+    {
+      "id": "094f93fd-2c43-49a1-cc1c-08dd5fcdffbe",
+      "firstName": "string",
+      "lastName": "string",
+      "middleName": "string",
+      "dateOfBirth": "2025-03-10",
+      "careerStartYear": 2000,
+      "status": "string",
+      "accountId": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+      "specializationId": "d71f7674-acad-4f9d-162e-08dd5d68474c",
+      "officeId": "3fa85f64-5717-4562-b3fc-2c963f66afa6"
+    },
+    {
+      "id": "05bd4b09-bbd3-414e-f452-08dd5d68f07e",
+      "firstName": "ivan",
+      "lastName": "ivanov",
+      "middleName": "ivanovich",
+      "dateOfBirth": "2025-03-07",
+      "careerStartYear": 2007,
+      "status": "v potoke",
+      "accountId": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+      "specializationId": "d71f7674-acad-4f9d-162e-08dd5d68474c",
+      "officeId": "3fa85f64-5717-4562-b3fc-2c963f66afa6"
+    },
+    {
+      "id": "094f93fd-2c43-49a1-cc1c-08dd5fcdffbe",
+      "firstName": "string",
+      "lastName": "string",
+      "middleName": "string",
+      "dateOfBirth": "2025-03-10",
+      "careerStartYear": 2000,
+      "status": "string",
+      "accountId": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+      "specializationId": "d71f7674-acad-4f9d-162e-08dd5d68474c",
+      "officeId": "3fa85f64-5717-4562-b3fc-2c963f66afa6"
+    }
+  ]

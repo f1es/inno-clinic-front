@@ -1,0 +1,37 @@
+<app-header></app-header>
+<div class="page-container">
+
+    <div class="left">
+        <div class="photo">
+            <img id="profile-photo" src="assets/data/blank.webp" alt="">
+        </div>
+        <div class="change-photo-button">
+            <label class="file-label" for="file-input">
+                change picture
+            </label>
+            <input type="file" id="file-input">
+        </div>
+    </div>
+
+    <div class="right">
+        <div class="details">
+            <div class="full-name">{{ profile.firstName }} {{ profile.lastName }} {{ profile.middleName }}</div>
+            <div class="email">Email: {{ account.email }}</div>
+            <div class="phone">Phone: {{ account.phoneNumber }}</div>
+            @if (role == "doctor"){
+                <div class="birthday">Birthday: {{ profile.dateOfBirth }}</div>
+                <div class="office">Office: {{ "office id" }}</div>
+                <div class="specialization">Specialization: {{ "specialization id" }}</div>
+            }
+    
+            @if (role == "receptionist"){
+                <div class="office">{{ "office id" }}</div>
+            }
+    
+            @if (role == "patient"){
+                <div class="birthday">{{ profile.dateOfBirth }}</div>
+            }
+        </div>
+    </div>
+    
+</div>

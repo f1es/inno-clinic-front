@@ -1,0 +1,27 @@
+.home-container{
+    display: flex;
+    .all-offices{
+        width: 100%;
+        min-height: calc(100vh - 80px);
+        background-color: brown;
+        padding: 20px 40px;
+        font-family: 'Rubik', sans-serif;
+        .top{
+            align-items: center;
+            justify-content: space-between;
+            display: flex;
+            h4{
+                font-family: 'Rubik', sans-serif;
+                color: white;
+                font-weight: bold;
+                border-left: 5px solid;
+                text-transform: uppercase;
+                padding-left: 10px;
+            }
+        }
+        .office-thumbnail{
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+}
