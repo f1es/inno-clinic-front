@@ -7,17 +7,17 @@ import { Injectable } from '@angular/core';
 export class OfficesService {
   constructor(private http: HttpClient) { }
 
-  private url: string = "https://localhost:44320";
+  private url: string = "http://localhost:5007";
 
   public getById(id: string): any{
-    return this.http.get("http://localhost:4200/assets/data/office.json", {
+    return this.http.get(this.url + `/gateway/offices/${id}`, {
       observe: 'response',
       withCredentials: true
     });
   }
 
   public getAll(): any{
-    return this.http.get(this.url + "/api/offices");
+    return this.http.get(this.url + "/gateway/offices");
   }
 
   public deleteDelegate: Function = (id: string) => {

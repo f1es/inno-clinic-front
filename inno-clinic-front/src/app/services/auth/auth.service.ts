@@ -8,7 +8,7 @@ import { StorageService } from '../storage-service/storage.service';
 })
 export class AuthService {
 
-  private url: string = "https://localhost:44366";
+  private url: string = "http://localhost:5007";
 
   constructor(
     private http: HttpClient,
@@ -20,7 +20,7 @@ export class AuthService {
       password: password,
     }
 
-    return this.http.post(this.url + '/api/accounts/login', data, {
+    return this.http.post(this.url + '/gateway/accounts/login', data, {
       observe: 'response',
       withCredentials: true
     }).pipe(tap((response: HttpResponse<any>) => {
@@ -44,7 +44,7 @@ export class AuthService {
       }
     }
 
-    return this.http.post(this.url + '/api/accounts/refresh', body, {
+    return this.http.post(this.url + '/gateway/accounts/refresh', body, {
       observe: 'response',
       withCredentials: true
     }).pipe(tap((response: HttpResponse<any>) => {
@@ -57,7 +57,6 @@ export class AuthService {
 
   public logout(): void{
     this.storage.removeTokens();
-    this.http.post(this.url + '/api/accounts/logout', {}).subscribe();
   }
 
   public isAuthenticated(): boolean{

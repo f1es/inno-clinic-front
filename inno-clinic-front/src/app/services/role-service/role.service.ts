@@ -27,6 +27,10 @@ export class RoleService {
     return this.getRole() === Role.doctor;
   }
 
+  public isPatient(): boolean {
+    return this.getRole() === Role.patient;
+  }
+
   private parseRole(role: string): Role{
     switch(role){
       case Role.doctor:
