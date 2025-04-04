@@ -28,4 +28,8 @@
         padding-left: 1%;
         width: 100%;
     }
+
+    ::ng-deep .p-carousel .p-carousel-item {
+        max-width: 275px;
+      }
 }
