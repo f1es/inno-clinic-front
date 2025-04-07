@@ -3,15 +3,18 @@ import { HeaderComponent } from "../../header/header.component";
 import { RoleService } from '../../services/role-service/role.service';
 import { ProfileService } from '../../services/profile-service/profile.service';
 import { Account } from '../../models/account.model';
+import { ExpansionContainerComponent } from "../../ui-components/expansion-container/expansion-container.component";
+import { AppointmentCardComponent } from "../../cards/appointment-card/appointment-card.component";
 
 @Component({
   selector: 'app-profile-page',
-  imports: [HeaderComponent],
+  imports: [HeaderComponent, ExpansionContainerComponent, AppointmentCardComponent],
   templateUrl: './profile-page.component.html',
   styleUrl: './profile-page.component.css'
 })
 export class ProfilePageComponent {
   public account: any;
+  public appointments: any;
 
   constructor(
     protected roleService: RoleService, 
@@ -19,9 +22,12 @@ export class ProfilePageComponent {
 
   public ngOnInit(): void {
     this.profileService.getAccountInfo().subscribe((account: Account) => {
-      console.log(account);
       this.account = account;
     });
+
+    this.profileService.getAccountAppointments().subscribe((appointments: any) => {
+      this.appointments = appointments;
+    })
   }
 
 }

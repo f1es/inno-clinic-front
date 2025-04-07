@@ -46,4 +46,10 @@
             }
         }
     }
+
+    .appointments{
+        padding-left: 15px;
+        width: 1050px;
+        display: flex;
+    }
 }

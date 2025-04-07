@@ -13,4 +13,8 @@ export class ProfileService {
   public getAccountInfo(): any{
     return this.http.get(`http://localhost:5007/gateway/accounts/get-info`);
   }
+
+  public getAccountAppointments(): any{
+    return this.http.get("http://localhost:5007/gateway/appointments/for-patient");
+  }
 }

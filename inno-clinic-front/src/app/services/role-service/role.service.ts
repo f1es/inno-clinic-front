@@ -16,15 +16,15 @@ export class RoleService {
   }
 
   public isReceptionist(): boolean {
-    return this.jwtService.getRole() === Role.receptionist;
+    return this.getRole() === Role.receptionist;
   }
 
   public isDoctor(): boolean {
-    return this.jwtService.getRole() === Role.doctor;
+    return this.getRole() === Role.doctor;
   }
 
   public isPatient(): boolean {
-    return this.jwtService.getRole() === Role.patient;
+    return this.getRole() === Role.patient;
   }
 
   private parseRole(role: string): Role{
