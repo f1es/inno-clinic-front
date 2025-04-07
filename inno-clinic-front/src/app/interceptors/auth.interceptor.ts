@@ -34,7 +34,7 @@ export const authInterceptor: HttpInterceptorFn = (req, next) => {
   );
 
   function addAccessTokenToRequest(request: HttpRequest<unknown>): HttpRequest<any>{
-    const authType: string = "bearer";
+    const authType: string = "Bearer";
   
     var authToken = storage.getAccessToken();
     if (authToken) {

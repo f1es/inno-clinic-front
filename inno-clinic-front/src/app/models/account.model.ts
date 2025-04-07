@@ -1,5 +1,8 @@
 export interface Account{
     id: string;
+    firstName: string,
+    lastName: string,
+    middleName: string,
     email: string;
     phoneNumber: string;
     isEmailVerified: true;
