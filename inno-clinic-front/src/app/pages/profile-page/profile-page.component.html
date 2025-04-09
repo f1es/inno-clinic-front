@@ -3,21 +3,25 @@
 
     <div class="left">
         <div class="photo">
-            <img id="profile-photo" src="assets/data/blank.webp" alt="">
+            <img id="profile-photo" [src]="imageUrl" alt="">
         </div>
         <div class="change-photo-button">
             <label class="file-label" for="file-input">
                 change picture
             </label>
-            <input type="file" id="file-input">
+            <input type="file" 
+                id="file-input"
+                class="form-control" 
+                accept=".png, .jpg, .jpeg"  
+                (change)="onImageSelect($event)">
         </div>
     </div>
 
     <div class="right">
         <div class="details">
-            <div class="full-name">{{ account.firstName }} {{ account.lastName }} {{ account.middleName }}</div>
-            <div class="email">Email: {{ account.email }}</div>
-            <div class="phone">Phone: {{ account.phoneNumber }}</div>
+            <div class="full-name">{{ account?.firstName }} {{ account?.lastName }} {{ account?.middleName }}</div>
+            <div class="email">Email: {{ account?.email }}</div>
+            <div class="phone">Phone: {{ account?.phoneNumber }}</div>
         </div>
     </div>
 

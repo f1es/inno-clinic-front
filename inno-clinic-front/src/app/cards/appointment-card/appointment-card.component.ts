@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { RoleService } from '../../services/role-service/role.service';
 
 @Component({
   selector: 'app-appointment-card',
@@ -8,4 +9,6 @@ import { Component, Input } from '@angular/core';
 })
 export class AppointmentCardComponent {
   @Input() appointment: any;
+
+  constructor(protected roleService: RoleService) {}
 }

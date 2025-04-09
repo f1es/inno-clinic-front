@@ -31,15 +31,16 @@
     }
 
     .right{
-        margin-left: 3%;
+        margin-left: 25px;
         background-color: white;
         border-radius: 15px;
         height: fit-content;
 
         .details{
-            padding: 40px;
+            width: 465px;
+            padding: 20px;
             font-family: 'Rubik', sans-serif;
-            font-size: 32px;
+            font-size: 26px;
             position: relative;
             .full-name{
                 font-weight: bold;

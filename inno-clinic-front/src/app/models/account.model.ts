@@ -5,11 +5,11 @@ export interface Account{
     middleName: string,
     email: string;
     phoneNumber: string;
-    isEmailVerified: true;
+    isEmailVerified: boolean;
     createdBy: string;
     createdAt: Date;
     updatedBy: string;
     updatedAt: Date;
-    role: "receptionist" | "doctor" | undefined;
+    role: "receptionist" | "doctor" | "";
     photoId: string;
 }

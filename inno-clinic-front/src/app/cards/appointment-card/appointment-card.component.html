@@ -3,18 +3,27 @@
         <div class="patient">{{ appointment.patient }}</div>
         <div class="service">{{ appointment.service }}</div>
         <div class="date"> {{ appointment.date }} </div>
-        <div class="time">{{ appointment.time }}</div>
+        <div class="time">{{ appointment.beginTime }}-{{ appointment.endTime }}</div>
     </div>
 
-    @if (appointment.isApproved){
+    @if (roleService.isDoctor()){
+        @if (appointment.isApproved){
+            <div class="buttons">
+                <button class="btn btn-dark">Add result</button>
+            </div>
+        }
+        @else{
+            <div class="buttons">
+                <button class="btn btn-success">Approve</button>
+                <button class="btn btn-danger">Decline</button>
+            </div>
+        }
+    }
+
+    @if (appointment.result) {
         <div class="buttons">
-            <button class="btn btn-dark">Add result</button>
+            <button class="btn btn-dark">Get result</button>
         </div>
     }
-    @else{
-        <div class="buttons">
-            <button class="btn btn-success">Approve</button>
-            <button class="btn btn-danger">Decline</button>
-        </div>
-    }
+
 </div>
