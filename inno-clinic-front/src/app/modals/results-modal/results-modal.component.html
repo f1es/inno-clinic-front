@@ -1,0 +1,12 @@
+
+<div class="dialog-container">
+    <div class="data">
+        <p>complaints: {{ data.result.complaints }}</p>
+        <p>conclusion:  {{ data.result.conclusion }}</p>
+        <p>reccomendations: {{ data.result.reccomendations }}</p>
+    </div>
+
+    <div class="bottom-container">
+        <button class="btn btn-dark" (click)="downloadDocument()">Download documents</button>
+    </div>
+</div>

@@ -8,17 +8,21 @@ export class DocumentsService {
 
   constructor(private http: HttpClient) { }
 
-  private url: string = "http://localhost:5004";
+  private url: string = "http://localhost:5007";
 
   public getImageUrl(id: string) {
-    return this.http.get(this.url + `/api/photos/${id}`);
+    return this.http.get(this.url + `/gateway/photos/${id}`);
   }
 
   public postImage(image: FormData) {
-    return this.http.post(this.url + `/api/photos`, image);
+    return this.http.post(this.url + `/gateway/photos`, image);
   }
 
   public putImage(id: string, image: FormData) {
-    return this.http.put(this.url + `/api/photos/${id}`, image);
+    return this.http.put(this.url + `/gateway/photos/${id}`, image);
+  }
+
+  public getResult(id: string) {
+    return this.http.get(this.url + `/gateway/documents/${id}`);
   }
 }
